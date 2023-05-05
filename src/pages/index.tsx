@@ -10,10 +10,10 @@ const Home = () => {
     <div>
       <AppLayout>
         <Row>
-          <Col xs={6} sm={6} md={4}>
+          <Col xs={12} sm={8} md={4}>
             <Recommendation />
           </Col>
-          <Col xs={6} sm={6} md={4}>
+          <Col xs={12} sm={8} md={4}>
             <LangCategory />
           </Col>
         </Row>
