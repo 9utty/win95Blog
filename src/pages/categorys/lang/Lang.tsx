@@ -45,13 +45,20 @@ const LangCategory = () => {
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="TypeScript."></CategoryFolder>
+          <CategoryFolder FolderName="TypeScript.">
+            <div></div>
+          </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C++." />
+          <CategoryFolder FolderName="C++.">
+            <div></div>
+          </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C." />
+          <CategoryFolder FolderName="C.">
+            {" "}
+            <div></div>
+          </CategoryFolder>
         </Col>
         {/** Category 컴포넌트들 작성 후 나열 */}
       </Row>
