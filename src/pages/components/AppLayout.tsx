@@ -12,8 +12,10 @@ import {
   AppBar,
   Frame,
   Bar,
+  Button,
 } from "react95";
 import Appbar from "./Appbar";
+import Link from "next/link";
 
 const { Footer } = Layout;
 type Props = {
@@ -39,7 +41,6 @@ const AppLayout = ({ children }: Props) => {
         height: "100vh",
       }}
     >
-      <Bar />
       <ThemeProvider theme={original}>
         <div
           style={{
@@ -47,6 +48,26 @@ const AppLayout = ({ children }: Props) => {
             height: "93.8%",
           }}
         >
+          <div style={{ top: "0px" }}>
+            <Bar style={{ width: "100vw", height: "40px" }}>
+              <Button>
+                <div
+                  style={{
+                    top: "50%",
+                    left: "50%",
+                    width: "30vw",
+                    transform: "translate(0%,0%)",
+                    fontSize: "20px",
+                    fontFamily: "dunggeunmo-bold",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  구티의 블로그
+                </div>
+              </Button>
+            </Bar>
+          </div>
           {children}
         </div>
         <Appbar />
