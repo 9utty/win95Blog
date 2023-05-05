@@ -11,6 +11,7 @@ import {
   styleReset,
   AppBar,
   Frame,
+  Bar,
 } from "react95";
 import Appbar from "./Appbar";
 
@@ -38,6 +39,7 @@ const AppLayout = ({ children }: Props) => {
         height: "100vh",
       }}
     >
+      <Bar />
       <ThemeProvider theme={original}>
         <div
           style={{
