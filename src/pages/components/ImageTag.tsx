@@ -6,7 +6,14 @@ interface Props {
 }
 
 const ImageTag = ({ Url }: Props) => {
-  return <Image preview={false} src={Url} width={"100%"} />;
+  return (
+    <Image
+      preview={false}
+      src={Url}
+      width={"100%"}
+      style={{ maxWidth: "500px" }}
+    />
+  );
 };
 
 export default ImageTag;
