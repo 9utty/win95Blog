@@ -52,7 +52,7 @@ const CategoryHeader = ({ HeaderName, children }: Props) => {
               height: "60vh",
               transform: screens.md
                 ? "translate(-50%, -50%)"
-                : "translate(0%, 30%)",
+                : "translate(0%, 10%)",
             }}
           >
             <WindowHeader

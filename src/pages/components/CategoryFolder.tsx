@@ -51,7 +51,7 @@ const CategoryFolder = ({ FolderName, children }: Props) => {
               height: "60vh",
               transform: screens.md
                 ? "translate(-50%, -50%)"
-                : "translate(0%, 10%)",
+                : "translate(0%, 15%)",
             }}
           >
             <WindowHeader
