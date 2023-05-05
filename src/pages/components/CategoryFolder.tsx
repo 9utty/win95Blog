@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Row, Col, Grid } from "antd";
-import { ComponentMeta } from "@storybook/react";
+import React, { Children, useState } from "react";
+import Folder from "./Folder";
+import styled from "styled-components";
 import {
   Button,
   Frame,
@@ -11,18 +11,18 @@ import {
   Counter,
   ScrollView,
 } from "react95";
-import styled from "styled-components";
-import PostButton from "./PostButton";
+import { Grid, Row, Col } from "antd";
+import Preview from "./Preview";
+import ImageTag from "./ImageTag";
 
 interface Props {
-  Header: string;
-  Date: string;
+  FolderName: string;
   children: React.ReactNode;
 }
 
 const { useBreakpoint } = Grid;
 
-const PostLayout = ({ Header, Date, children }: Props) => {
+const CategoryFolder = ({ FolderName, children }: Props) => {
   const screens = useBreakpoint();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -38,7 +38,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
 
   return (
     <div>
-      <PostButton Header={Header} Date={Date} func={openModal} />
+      <Folder FolderName={FolderName} func={openModal} />
       {isVisible && (
         <ModalWrapper>
           <Window
@@ -59,7 +59,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
               style={{ justifyContent: "space-between", display: "flex" }}
             >
               <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
-                {`${Header}`}
+                {`${FolderName}`}
               </span>
               <Button style={{ marginTop: "3px" }} onClick={closeModal}>
                 <span
@@ -86,7 +86,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
   );
 };
 
-export default PostLayout;
+export default CategoryFolder;
 
 const ModalWrapper = styled.div`
   position: fixed;

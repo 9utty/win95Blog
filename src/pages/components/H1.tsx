@@ -12,3 +12,5 @@ const H1 = ({ children }: Props) => {
     </div>
   );
 };
+
+export default H1;

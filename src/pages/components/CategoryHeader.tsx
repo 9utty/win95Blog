@@ -12,17 +12,18 @@ import {
   ScrollView,
 } from "react95";
 import styled from "styled-components";
-import PostButton from "./PostButton";
-
-interface Props {
-  Header: string;
-  Date: string;
-  children: React.ReactNode;
-}
+import Folder from "@/pages/components/Folder";
+import Category from "@/pages/components/CategoryFolder";
+import CategoryFolder from "@/pages/components/CategoryFolder";
 
 const { useBreakpoint } = Grid;
 
-const PostLayout = ({ Header, Date, children }: Props) => {
+interface Props {
+  HeaderName: string;
+  children: React.ReactNode;
+}
+
+const CategoryHeader = ({ HeaderName, children }: Props) => {
   const screens = useBreakpoint();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,8 +38,8 @@ const PostLayout = ({ Header, Date, children }: Props) => {
   };
 
   return (
-    <div>
-      <PostButton Header={Header} Date={Date} func={openModal} />
+    <>
+      <Folder FolderName={`${HeaderName}`} func={openModal} />
       {isVisible && (
         <ModalWrapper>
           <Window
@@ -51,7 +52,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
               height: "60vh",
               transform: screens.md
                 ? "translate(-50%, -50%)"
-                : "translate(0%, 10%)",
+                : "translate(0%, 30%)",
             }}
           >
             <WindowHeader
@@ -59,7 +60,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
               style={{ justifyContent: "space-between", display: "flex" }}
             >
               <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
-                {`${Header}`}
+                {`${HeaderName}`}
               </span>
               <Button style={{ marginTop: "3px" }} onClick={closeModal}>
                 <span
@@ -70,23 +71,21 @@ const PostLayout = ({ Header, Date, children }: Props) => {
               </Button>
             </WindowHeader>
             <WindowContent>
-              <Row>
-                <ScrollView
-                  shadow={false}
-                  style={{ width: "100%", height: "44vh" }}
-                >
-                  {children}
-                </ScrollView>
-              </Row>
+              <ScrollView
+                shadow={false}
+                style={{ width: "100%", height: "44vh" }}
+              >
+                <div style={{ marginLeft: "10px" }}>{children}</div>
+              </ScrollView>
             </WindowContent>
           </Window>
         </ModalWrapper>
       )}
-    </div>
+    </>
   );
 };
 
-export default PostLayout;
+export default CategoryHeader;
 
 const ModalWrapper = styled.div`
   position: fixed;

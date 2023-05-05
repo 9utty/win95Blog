@@ -10,10 +10,12 @@ interface Props {
 const Folder = ({ FolderName, func }: Props) => {
   return (
     <div>
-      <Button
-        type="primary"
+      <button
         style={{
           background: "transparent",
+          borderWidth: "0px",
+          paddingTop: "10px",
+          width: "100px",
         }}
         onClick={func}
       >
@@ -45,7 +47,7 @@ const Folder = ({ FolderName, func }: Props) => {
             {FolderName}
           </span>
         </div>
-      </Button>
+      </button>
     </div>
   );
 };

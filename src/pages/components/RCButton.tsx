@@ -7,10 +7,11 @@ interface props {
 
 const RCButton = (props: props) => {
   return (
-    <Button
-      type="primary"
+    <button
       style={{
         background: "transparent",
+        borderWidth: "0px",
+        paddingTop: "10px",
       }}
       onClick={props.func}
     >
@@ -42,7 +43,7 @@ const RCButton = (props: props) => {
           메뉴추천
         </span>
       </div>
-    </Button>
+    </button>
   );
 };
 
