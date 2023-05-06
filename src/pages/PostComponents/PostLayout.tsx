@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Grid } from "antd";
+import { Row, Col, Grid, Divider } from "antd";
 import { ComponentMeta } from "@storybook/react";
 import {
   Button,
@@ -12,7 +12,11 @@ import {
   ScrollView,
 } from "react95";
 import styled from "styled-components";
-import PostButton from "./PostButton";
+import PostButton from "../components/PostButton";
+import Text from "./Text";
+import Spacer from "../components/Spacer";
+import TabTag from "./TabTag";
+import Div from "./Div";
 
 interface Props {
   Header: string;
@@ -76,6 +80,21 @@ const PostLayout = ({ Header, Date, children }: Props) => {
                   style={{ width: "100%", height: "44vh" }}
                 >
                   {children}
+                  <Spacer />
+                  <Spacer />
+                  <Spacer />
+                  <Spacer />
+                  <Div />
+                  <Text>
+                    <TabTag>
+                      <TabTag>개인 공부 기록용 블로그입니다</TabTag>
+                    </TabTag>
+                    <TabTag>
+                      <TabTag>잘못된 내용이 있다면 꼭 알려주세요!</TabTag>
+                    </TabTag>
+                  </Text>
+
+                  <Spacer />
                 </ScrollView>
               </Row>
             </WindowContent>

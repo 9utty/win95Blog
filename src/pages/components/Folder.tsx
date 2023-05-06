@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import React from "react";
-import ImageTag from "./ImageTag";
+import ImageTag from "../PostComponents/ImageTag";
 
 interface Props {
   FolderName: string;

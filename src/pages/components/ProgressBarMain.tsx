@@ -48,6 +48,7 @@ const ProgressBars = (props: props) => {
               position: "absolute",
               textAlign: "center",
               width: "100%",
+              fontFamily: "dunggeunmo-bold",
             }}
           >
             {Math.floor(percent)}

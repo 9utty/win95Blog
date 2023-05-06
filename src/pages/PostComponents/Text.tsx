@@ -3,13 +3,13 @@ type Props = {
   children: React.ReactNode;
 };
 /** - 내용  처럼 사용하기*/
-const Des = ({ children }: Props) => {
+const Text = ({ children }: Props) => {
   return (
     <div
-      style={{ fontSize: "20px", fontFamily: "dunggeunmo", marginTop: "10px" }}
+      style={{ fontSize: "20px", fontFamily: "dunggeunmo", marginTop: "30px" }}
     >
       {children}
     </div>
   );
 };
-export default Des;
+export default Text;

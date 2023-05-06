@@ -5,12 +5,12 @@ type Props = {
 };
 
 /** #, ##, ### 처럼 사용하기 */
-const H1 = ({ children }: Props) => {
+const H3 = ({ children }: Props) => {
   return (
-    <div style={{ fontSize: "30px", fontFamily: "dunggeunmo-bold" }}>
+    <div style={{ fontSize: "22px", fontFamily: "dunggeunmo-bold" }}>
       {children}
     </div>
   );
 };
 
-export default H1;
+export default H3;

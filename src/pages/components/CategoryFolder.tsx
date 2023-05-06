@@ -13,7 +13,7 @@ import {
 } from "react95";
 import { Grid, Row, Col } from "antd";
 import Preview from "./Preview";
-import ImageTag from "./ImageTag";
+import ImageTag from "../PostComponents/ImageTag";
 
 interface Props {
   FolderName: string;

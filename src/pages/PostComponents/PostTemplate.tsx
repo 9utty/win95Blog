@@ -1,0 +1,65 @@
+import H1 from "@/pages/PostComponents/H1";
+import React, { Children, useState } from "react";
+import Text from "./Text";
+import PostLayout from "./PostLayout";
+import Spacer from "../components/Spacer";
+import ImageTag from "./ImageTag";
+import { Col, Row } from "antd";
+import Div from "./Div";
+
+interface Post {
+  Header: string;
+  Date: string;
+  Tag: string;
+  children: React.ReactNode;
+}
+
+const PostTemplate = (props: Post) => {
+  const [Header, setHeader] = useState(props.Header);
+  const [Date, setDate] = useState(props.Date);
+
+  return (
+    <div>
+      <PostLayout Header={Header} Date={Date}>
+        <div style={{ marginRight: "10px", marginLeft: "10px" }}>
+          <Text>
+            <div
+              style={{
+                fontSize: "15px",
+                color: "#666",
+                justifyContent: "end",
+                alignItems: "end",
+                display: "flex",
+              }}
+            >
+              {Date}
+            </div>
+          </Text>
+
+          <H1>
+            <div>{Header}</div>
+          </H1>
+          <div
+            style={{
+              flexDirection: "row",
+              display: "flex",
+              alignItems: "end",
+            }}
+          >
+            <img
+              src="https://user-images.githubusercontent.com/86397600/236613570-1475d4e4-44b7-4c02-88a3-160e4db52d99.png"
+              width={"32px"}
+            />
+            <Text>{`Tag : "${props.Tag}"`}</Text>
+          </div>
+          <Div />
+          <Spacer />
+          <Spacer />
+          {props.children}
+        </div>
+      </PostLayout>
+    </div>
+  );
+};
+
+export default PostTemplate;

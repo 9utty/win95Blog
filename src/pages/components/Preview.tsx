@@ -1,10 +1,10 @@
 import React from "react";
-import H1 from "./H1";
-import Des from "./Des";
+import H1 from "../PostComponents/H1";
+import Text from "../PostComponents/Text";
 
 interface Props {
   Header: string;
-  Des: string;
+  Text: string;
 }
 
 const Preview = (props: Props) => {
@@ -13,9 +13,9 @@ const Preview = (props: Props) => {
       <H1>
         <div>{props.Header}</div>
       </H1>
-      <Des>
-        <div>{props.Des}</div>
-      </Des>
+      <Text>
+        <div>{props.Text}</div>
+      </Text>
     </div>
   );
 };
