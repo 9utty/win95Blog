@@ -12,6 +12,7 @@ const TabTag = ({ children }: Props) => {
         marginLeft: "10px",
         fontFamily: "dunggeunmo",
         fontSize: "17px",
+        marginTop: "5px",
       }}
     >
       {children}

@@ -35,10 +35,12 @@ const PostTemplate = (props: Post) => {
               {Date}
             </div>
           </Text>
-
+          <Spacer />
           <H1>
             <div>{Header}</div>
           </H1>
+          <Spacer />
+
           <div
             style={{
               flexDirection: "row",
@@ -48,7 +50,7 @@ const PostTemplate = (props: Post) => {
           >
             <img
               src="https://user-images.githubusercontent.com/86397600/236613570-1475d4e4-44b7-4c02-88a3-160e4db52d99.png"
-              width={"32px"}
+              width={"30px"}
             />
             <Text>{`Tag : "${props.Tag}"`}</Text>
           </div>

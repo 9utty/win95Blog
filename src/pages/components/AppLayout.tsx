@@ -2,7 +2,7 @@ import React from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import tokyoDart from "react95/dist/themes/tokyoDark";
 import original from "react95/dist/themes/original";
-import { Layout } from "antd";
+import { Layout, Grid } from "antd";
 // UI components
 import {
   MenuList,
@@ -17,6 +17,7 @@ import {
 import Appbar from "./Appbar";
 import Link from "next/link";
 
+const { useBreakpoint } = Grid;
 const { Footer } = Layout;
 type Props = {
   children: React.ReactNode;
@@ -29,6 +30,7 @@ const Background = styled.div`
 `;
 
 const AppLayout = ({ children }: Props) => {
+  const screens = useBreakpoint();
   return (
     <div
       style={{
