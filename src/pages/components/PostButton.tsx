@@ -13,6 +13,7 @@ const PostButton = (porps: Props) => {
         width: "100%",
         height: "40px",
         paddingBottom: "5px",
+        marginBottom: "5px",
       }}
       onClick={porps.func}
     >

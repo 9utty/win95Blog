@@ -19,6 +19,7 @@ import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
 import PostButton from "@/pages/components/PostButton";
 import PostLayout from "@/pages/PostComponents/PostLayout";
+import JavaScript2 from "./javascript/JavaScript2";
 
 const { useBreakpoint } = Grid;
 
