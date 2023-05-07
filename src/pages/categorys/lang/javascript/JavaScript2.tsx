@@ -14,7 +14,7 @@ interface Post {
 }
 
 const Post: Post = {
-  Header: "함수형 프로그래밍 정의, 순수함수",
+  Header: "함수형 프로그래밍, 순수함수",
   Date: "2023년 05월 06일",
   Tag: "JavaScript",
 };
