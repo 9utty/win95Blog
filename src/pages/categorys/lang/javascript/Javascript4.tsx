@@ -115,6 +115,83 @@ delay(1, (result) => {
       <H2>
         <div>{`여기서 만약 코드를 잠깐 수정해보자`}</div>
       </H2>
+      <CodeTag
+        code={`function delay(sec, callback) {
+  setTimeout(() => {
+    callback(new Date().toISOString());
+  }, sec * 1000);
+}
+
+delay(1, (result) => {
+  console.log(1, result);
+  delay(1, (result) => {
+    delay(1, (result) => {
+ 			console.log(3, result);
+});
+    console.log(2, result);
+});
+});`}
+        lang={"javascript"}
+      />
+      <TextTag>
+        <div>
+          {`- 마지막 3번 콜백 함수 밑에 console.log(2, result); 를 한다고 했을땐 결과는 어떻게 나올까?`}
+        </div>
+      </TextTag>
+      <TextTag>
+        <div>
+          {`- 사실은 맨 위에 코드랑 똑같이 동작을 한다`}
+          <div>
+            {`\n하지만 여기서 문제가 되는건 사람은 보통 코드를 읽을때는 위에서 아래로 읽게 되는데, 이때 흐름상 3이 먼저 실행 되어야 할 것 같은 느낌인데 전혀 다른 결과가 나오게 된다`}
+          </div>
+        </div>
+        <div>{`이 문제를 해결하기 위해 나온게 Promise, async, await 이다`}</div>
+      </TextTag>
+      <H2>
+        <div>{`위에 코드를 Promise 형태로 구현해보자`}</div>
+      </H2>
+      <CodeTag
+        code={`function delay(sec, callback) {
+  setTimeout(() => {
+    callback(new Date().toISOString());
+  }, sec * 1000);
+}
+
+delay(1, (result) => {
+  console.log(1, result);
+});
+
+function delayP(sec) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+    resolve(new Date().toISOString());
+  }, sec * 1000);
+  })
+}
+
+delayP(1).then((result => {
+  console.log(1, result);
+}))`}
+        lang={"javascript"}
+      />
+      <TextTag>
+        <div>{`- resolve`}</div>
+        <TabTag>
+          <div>{`* 할일을 다 했을때 호출하는 곳`}</div>
+        </TabTag>
+      </TextTag>
+      <TextTag>
+        <div>{`- reject`}</div>
+        <TabTag>
+          <div>{`* 할일을 하다가 예외가 발생했을 때 호출 하는 곳`}</div>
+        </TabTag>
+      </TextTag>
+      <TextTag>
+        <div>
+          {`- Promise는 callback 과 다른건 resolve를 호출하게 되는데, 이때 resolve가 호출이 된다면 then((result) => {}) 함수에서 받는 result에 값을 넣어주게 된다`}
+        </div>
+        <div>{`이걸 실행해서 1초 후에 date가 출력하게 된다`}</div>
+      </TextTag>
     </PostTemplate>
   );
 };
