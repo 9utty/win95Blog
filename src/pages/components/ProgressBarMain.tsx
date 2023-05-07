@@ -16,7 +16,7 @@ const ProgressBars = (props: props) => {
         const diff = Math.random() * 10;
         return Math.min(previousPercent + diff, 100);
       });
-    }, 200);
+    }, 150);
     return () => {
       clearInterval(timer);
     };

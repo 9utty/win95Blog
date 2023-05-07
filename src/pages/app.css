@@ -44,24 +44,24 @@ pre code.hljs {
   overflow-x: auto;
   padding: 1em;
   background-color: #7b7b7b;
-  color: #000000;
+  color: #ffffff;
   font-family: dunggeunmo;
 }
 
 pre code.hljs span {
   font-weight: normal;
+  color: #333;
 }
 
 pre code.hljs span.hljs-comment,
 pre code.hljs span.hljs-quote {
   color: #008000;
-  font-style: italic;
 }
 
 pre code.hljs span.hljs-keyword,
 pre code.hljs span.hljs-selector-tag,
 pre code.hljs span.hljs-subst {
-  color: #d547c4;
+  color: #ff5aec;
   font-weight: bold;
 }
 
