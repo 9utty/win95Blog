@@ -13,7 +13,7 @@ interface Post {
 
 const Post: Post = {
   Header: "JavaScript의 변천사",
-  Date: "2023년 5월 5일",
+  Date: "2023년 05월 05일",
   Tag: "JavaScript",
 };
 
