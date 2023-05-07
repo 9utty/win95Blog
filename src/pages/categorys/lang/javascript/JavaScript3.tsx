@@ -9,7 +9,7 @@ interface Post {
 }
 
 const Post: Post = {
-  Header: "일급함수, add_maker 함수로 함수 실행하기",
+  Header: "일급함수, add_maker",
   Date: "2023년 5월 7일",
   Tag: "JavaScript",
 };
@@ -18,7 +18,7 @@ const JavaScript3 = () => {
   return (
     <PostTemplate Header={Post.Header} Date={Post.Date} Tag={Post.Tag}>
       <H2>
-        <div>{`일급함수, add_maker 함수로 함수 실행하기`}</div>
+        <div>{`일급함수`}</div>
       </H2>
     </PostTemplate>
   );
