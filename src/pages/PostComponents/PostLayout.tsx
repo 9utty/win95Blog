@@ -13,7 +13,7 @@ import {
 } from "react95";
 import styled from "styled-components";
 import PostButton from "../components/PostButton";
-import Text from "./Text";
+import TextTag from "./TextTag";
 import Spacer from "../components/Spacer";
 import TabTag from "./TabTag";
 import Div from "./Div";
@@ -85,14 +85,14 @@ const PostLayout = ({ Header, Date, children }: Props) => {
                   <Spacer />
                   <Spacer />
                   <Div />
-                  <Text>
+                  <TextTag>
                     <TabTag>
                       <TabTag>개인 공부 기록용 블로그입니다</TabTag>
                     </TabTag>
                     <TabTag>
                       <TabTag>잘못된 내용이 있다면 꼭 알려주세요!</TabTag>
                     </TabTag>
-                  </Text>
+                  </TextTag>
 
                   <Spacer />
                 </ScrollView>

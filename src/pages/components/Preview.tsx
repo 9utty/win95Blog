@@ -1,6 +1,6 @@
 import React from "react";
 import H1 from "../PostComponents/H1";
-import Text from "../PostComponents/Text";
+import TextTag from "../PostComponents/TextTag";
 
 interface Props {
   Header: string;
@@ -13,9 +13,9 @@ const Preview = (props: Props) => {
       <H1>
         <div>{props.Header}</div>
       </H1>
-      <Text>
+      <TextTag>
         <div>{props.Text}</div>
-      </Text>
+      </TextTag>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import H1 from "@/pages/PostComponents/H1";
 import React, { Children, useState } from "react";
-import Text from "./Text";
+import TextTag from "./TextTag";
 import PostLayout from "./PostLayout";
 import Spacer from "../components/Spacer";
 import ImageTag from "./ImageTag";
@@ -22,7 +22,7 @@ const PostTemplate = (props: Post) => {
     <div>
       <PostLayout Header={Header} Date={Date}>
         <div style={{ marginRight: "10px", marginLeft: "10px" }}>
-          <Text>
+          <TextTag>
             <div
               style={{
                 fontSize: "15px",
@@ -34,7 +34,7 @@ const PostTemplate = (props: Post) => {
             >
               {Date}
             </div>
-          </Text>
+          </TextTag>
           <Spacer />
           <H1>
             <div>{Header}</div>
@@ -52,7 +52,7 @@ const PostTemplate = (props: Post) => {
               src="https://user-images.githubusercontent.com/86397600/236613570-1475d4e4-44b7-4c02-88a3-160e4db52d99.png"
               width={"30px"}
             />
-            <Text>{`Tag : "${props.Tag}"`}</Text>
+            <TextTag>{`Tag : "${props.Tag}"`}</TextTag>
           </div>
           <Div />
           <Spacer />
