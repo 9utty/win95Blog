@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Text from "@/pages/PostComponents/Text";
 import hljs from "highlight.js";
 
 interface Code {
