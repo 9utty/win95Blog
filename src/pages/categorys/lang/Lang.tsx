@@ -20,6 +20,7 @@ import CategoryHeader from "@/pages/components/CategoryHeader";
 import PostButton from "@/pages/components/PostButton";
 import PostLayout from "@/pages/PostComponents/PostLayout";
 import JavaScript2 from "./javascript/JavaScript2";
+import JavaScript3 from "./javascript/JavaScript3";
 
 const { useBreakpoint } = Grid;
 
@@ -42,8 +43,9 @@ const LangCategory = () => {
       <Row>
         <Col xs={12} sm={8} md={6}>
           <CategoryFolder FolderName="JavaScript.">
-            <JavaScript1 />
+            <JavaScript3 />
             <JavaScript2 />
+            <JavaScript1 />
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
