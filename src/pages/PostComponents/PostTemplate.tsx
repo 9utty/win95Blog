@@ -55,8 +55,6 @@ const PostTemplate = (props: Post) => {
             <TextTag>{`Tag : "${props.Tag}"`}</TextTag>
           </div>
           <Div />
-          <Spacer />
-          <Spacer />
           {props.children}
         </div>
       </PostLayout>
