@@ -29,7 +29,6 @@ const ProjectCategory = () => {
         </Col>
         <Col xs={12} sm={8} md={6}>
           <CategoryFolder FolderName="Win95Blog">
-            {" "}
             <div></div>
           </CategoryFolder>
         </Col>
