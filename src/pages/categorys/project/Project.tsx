@@ -2,39 +2,33 @@ import React from "react";
 import { Row, Col, Grid } from "antd";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
-import JavaScript1 from "./javascript/JavaScript1";
-import JavaScript2 from "./javascript/JavaScript2";
-import JavaScript3 from "./javascript/JavaScript3";
-import JavaScript4 from "./javascript/Javascript4";
 
 const { useBreakpoint } = Grid;
 
-const LangCategory = () => {
+const ProjectCategory = () => {
   const screens = useBreakpoint();
   const JavaScriptComponents = [...JSComponents].reverse();
 
   return (
-    <CategoryHeader HeaderName="LANGUAGE.">
+    <CategoryHeader HeaderName="PROJECT.">
       <Row>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="JavaScript.">
-            {JavaScriptComponents.map(({ Component }, index) => {
-              return <Component key={index} />;
-            })}
-          </CategoryFolder>
-        </Col>
-        <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="TypeScript.">
+          <CategoryFolder FolderName="Moim.">
             <div></div>
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C++.">
+          <CategoryFolder FolderName="42Manito.">
             <div></div>
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C.">
+          <CategoryFolder FolderName="42메뉴추천">
+            <div></div>
+          </CategoryFolder>
+        </Col>
+        <Col xs={12} sm={8} md={6}>
+          <CategoryFolder FolderName="Win95Blog">
             {" "}
             <div></div>
           </CategoryFolder>
@@ -45,7 +39,7 @@ const LangCategory = () => {
   );
 };
 
-export default LangCategory;
+export default ProjectCategory;
 
 interface Componets {
   Component: React.FunctionComponent;
@@ -81,48 +75,48 @@ const JSPost: Post[] = [
 ];
 
 const JSComponents: Componets[] = [
-  {
-    Component: () => {
-      return (
-        <JavaScript1
-          Header={JSPost[0].Header}
-          Date={JSPost[0].Date}
-          Tag={JSPost[0].Tag}
-        />
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <JavaScript2
-          Header={JSPost[1].Header}
-          Date={JSPost[1].Date}
-          Tag={JSPost[1].Tag}
-        />
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <JavaScript3
-          Header={JSPost[2].Header}
-          Date={JSPost[2].Date}
-          Tag={JSPost[2].Tag}
-        />
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <JavaScript4
-          Header={JSPost[3].Header}
-          Date={JSPost[3].Date}
-          Tag={JSPost[3].Tag}
-        />
-      );
-    },
-  },
+  //   {
+  //     Component: () => {
+  //       return (
+  //         <JavaScript1
+  //           Header={JSPost[0].Header}
+  //           Date={JSPost[0].Date}
+  //           Tag={JSPost[0].Tag}
+  //         />
+  //       );
+  //     },
+  //   },
+  //   {
+  //     Component: () => {
+  //       return (
+  //         <JavaScript2
+  //           Header={JSPost[1].Header}
+  //           Date={JSPost[1].Date}
+  //           Tag={JSPost[1].Tag}
+  //         />
+  //       );
+  //     },
+  //   },
+  //   {
+  //     Component: () => {
+  //       return (
+  //         <JavaScript3
+  //           Header={JSPost[2].Header}
+  //           Date={JSPost[2].Date}
+  //           Tag={JSPost[2].Tag}
+  //         />
+  //       );
+  //     },
+  //   },
+  //   {
+  //     Component: () => {
+  //       return (
+  //         <JavaScript4
+  //           Header={JSPost[3].Header}
+  //           Date={JSPost[3].Date}
+  //           Tag={JSPost[3].Tag}
+  //         />
+  //       );
+  //     },
+  //   },
 ];
