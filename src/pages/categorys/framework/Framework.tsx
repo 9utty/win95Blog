@@ -2,22 +2,25 @@ import React from "react";
 import { Row, Col, Grid } from "antd";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
+import React1 from "./react/React1";
 
 const { useBreakpoint } = Grid;
 
 const FrameWorkCategory = () => {
   const screens = useBreakpoint();
-  const JavaScriptComponents = [...JSComponents].reverse();
+  const ReactCom = [...ReactComponents].reverse();
 
   return (
     <CategoryHeader HeaderName="FRAMEWORK.">
       <Row>
         <Col xs={12} sm={8} md={6}>
           <CategoryFolder FolderName="React.">
-            {/* {JavaScriptComponents.map(({ Component }, index) => {
+            {/* {ReactCom.map(({ Component }, index) => {
               return <Component key={index} />;
             })} */}
-            <div></div>
+            {ReactCom.map(({ Component }, index) => {
+              return <Component key={index} />;
+            })}
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
@@ -48,39 +51,24 @@ interface Post {
   Tag: string;
 }
 
-const JSPost: Post[] = [
+const ReactPost: Post[] = [
   {
-    Header: "JavaScript의 변천사",
-    Date: "2023년 05월 05일",
-    Tag: "JavaScript",
-  },
-  {
-    Header: "함수형 프로그래밍, 순수함수",
-    Date: "2023년 05월 06일",
-    Tag: "JavaScript",
-  },
-  {
-    Header: "일급함수, add_maker",
-    Date: "2023년 05월 07일",
-    Tag: "JavaScript",
-  },
-  {
-    Header: "Promise 기본 개념부터~",
-    Date: "2023년 05월 07일",
-    Tag: "JavaScript",
+    Header: "Props Drilling에 대한 고민",
+    Date: "2023년 04월 06일",
+    Tag: "React",
   },
 ];
 
-const JSComponents: Componets[] = [
-  //   {
-  //     Component: () => {
-  //       return (
-  //         <JavaScript1
-  //           Header={JSPost[0].Header}
-  //           Date={JSPost[0].Date}
-  //           Tag={JSPost[0].Tag}
-  //         />
-  //       );
-  //     },
-  //   },
+const ReactComponents: Componets[] = [
+  {
+    Component: () => {
+      return (
+        <React1
+          Header={ReactPost[0].Header}
+          Date={ReactPost[0].Date}
+          Tag={ReactPost[0].Tag}
+        />
+      );
+    },
+  },
 ];
