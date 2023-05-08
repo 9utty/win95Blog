@@ -5,9 +5,11 @@ import RCButton from "./components/RCButton";
 import { Row, Col } from "antd";
 import LangCategory from "./categorys/lang/Lang";
 import ProgressBars from "./components/ProgressBarMain";
+import ProjectCategory from "./categorys/project/Project";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div>
       {" "}
@@ -29,12 +31,9 @@ const Home = () => {
         <div>
           <AppLayout>
             <Row>
-              <Col xs={12} sm={8} md={4}>
-                <Recommendation />
-              </Col>
-              <Col xs={12} sm={8} md={4}>
-                <LangCategory />
-              </Col>
+              {Components.map(({ Component }, index) => {
+                return <Component key={index} />;
+              })}
             </Row>
           </AppLayout>
         </div>
@@ -44,3 +43,37 @@ const Home = () => {
 };
 
 export default Home;
+
+interface Component {
+  Component: React.FunctionComponent;
+}
+
+const Components: Component[] = [
+  {
+    Component: () => {
+      return (
+        <Col xs={12} sm={8} md={4}>
+          <Recommendation />
+        </Col>
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <Col xs={12} sm={8} md={4}>
+          <LangCategory />
+        </Col>
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <Col xs={12} sm={8} md={4}>
+          <ProjectCategory />
+        </Col>
+      );
+    },
+  },
+];

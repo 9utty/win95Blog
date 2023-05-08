@@ -13,15 +13,9 @@ interface Post {
   Tag: string;
 }
 
-const Post: Post = {
-  Header: "",
-  Date: "",
-  Tag: "",
-};
-
-const PostForm = () => {
+const PostForm = ({ Header, Date, Tag }: Post) => {
   return (
-    <PostTemplate Header={Post.Header} Date={Post.Date} Tag={Post.Tag}>
+    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
       <div></div>
     </PostTemplate>
   );

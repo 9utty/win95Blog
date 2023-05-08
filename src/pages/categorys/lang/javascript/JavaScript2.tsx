@@ -13,15 +13,9 @@ interface Post {
   Tag: string;
 }
 
-const Post: Post = {
-  Header: "함수형 프로그래밍, 순수함수",
-  Date: "2023년 05월 06일",
-  Tag: "JavaScript",
-};
-
-const JavaScript2 = () => {
+const JavaScript2 = ({ Header, Date, Tag }: Post) => {
   return (
-    <PostTemplate Header={Post.Header} Date={Post.Date} Tag={Post.Tag}>
+    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
       <H2>성공적인 프로그래밍에 대해서 생각해보자</H2>
       <Spacer />
       <Spacer />
