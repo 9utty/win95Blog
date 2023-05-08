@@ -1,10 +1,14 @@
+import { Grid } from "antd";
 import React, { useState } from "react";
 import { Counter, Frame, Button } from "react95";
+
+const { useBreakpoint } = Grid;
 
 const Lunch = () => {
   const [number, setNumber] = useState(0);
   const [key, setKey] = useState("");
   const [value, setValue] = useState("");
+  const screens = useBreakpoint();
 
   const onClickNumber = () => {
     const randomIndex = Math.floor(Math.random() * lunchMenuList.length);
@@ -22,13 +26,16 @@ const Lunch = () => {
           alignItems: "center",
         }}
       >
-        <Counter size="xl" value={number} />
+        <Counter size={screens.md ? "xl" : "md"} value={number} />
       </div>
       <div style={{ marginTop: "20px", marginBottom: "20px" }}>
         <Frame
           variant="well"
           className="footer"
-          style={{ fontFamily: "dunggeunmo", fontSize: "18px" }}
+          style={{
+            fontFamily: "dunggeunmo",
+            fontSize: screens.md ? "18px" : "14px",
+          }}
         >
           오늘의 점심메뉴는 ? {`${key} / ${value}`}
         </Frame>
