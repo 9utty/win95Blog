@@ -26,12 +26,12 @@ const ProjectCategory = () => {
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="42메뉴추천">
+          <CategoryFolder FolderName="42메뉴추천.">
             <div></div>
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="Win95Blog">
+          <CategoryFolder FolderName="Win95Blog.">
             <div></div>
           </CategoryFolder>
         </Col>
