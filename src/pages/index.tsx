@@ -6,6 +6,7 @@ import { Row, Col } from "antd";
 import LangCategory from "./categorys/lang/Lang";
 import ProgressBars from "./components/ProgressBarMain";
 import ProjectCategory from "./categorys/project/Project";
+import FrameWorkCategory from "./categorys/framework/Framework";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +31,7 @@ const Home = () => {
       ) : (
         <div>
           <AppLayout>
-            <Row>
+            <Row gutter={[0, 30]}>
               {Components.map(({ Component }, index) => {
                 return <Component key={index} />;
               })}
@@ -72,6 +73,15 @@ const Components: Component[] = [
       return (
         <Col xs={12} sm={8} md={4}>
           <ProjectCategory />
+        </Col>
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <Col xs={12} sm={8} md={4}>
+          <FrameWorkCategory />
         </Col>
       );
     },

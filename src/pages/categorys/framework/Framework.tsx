@@ -2,36 +2,34 @@ import React from "react";
 import { Row, Col, Grid } from "antd";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
-import Moim1 from "./Moim/Moim1";
+import React1 from "./react/React1";
 
 const { useBreakpoint } = Grid;
 
-const ProjectCategory = () => {
+const FrameWorkCategory = () => {
   const screens = useBreakpoint();
-  const MoimCom = [...MoimComponents].reverse();
+  const ReactCom = [...ReactComponents].reverse();
 
   return (
-    <CategoryHeader HeaderName="PROJECT.">
+    <CategoryHeader HeaderName="FRAMEWORK.">
       <Row>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="Moim.">
-            {MoimCom.map(({ Component }, index) => {
+          <CategoryFolder FolderName="React.">
+            {/* {ReactCom.map(({ Component }, index) => {
+              return <Component key={index} />;
+            })} */}
+            {ReactCom.map(({ Component }, index) => {
               return <Component key={index} />;
             })}
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="42Manito.">
+          <CategoryFolder FolderName="React Mative.">
             <div></div>
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="42메뉴추천.">
-            <div></div>
-          </CategoryFolder>
-        </Col>
-        <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="Win95Blog.">
+          <CategoryFolder FolderName="Next JS.">
             <div></div>
           </CategoryFolder>
         </Col>
@@ -41,7 +39,7 @@ const ProjectCategory = () => {
   );
 };
 
-export default ProjectCategory;
+export default FrameWorkCategory;
 
 interface Componets {
   Component: React.FunctionComponent;
@@ -53,22 +51,22 @@ interface Post {
   Tag: string;
 }
 
-const MoimPost: Post[] = [
+const ReactPost: Post[] = [
   {
-    Header: "Moim?",
+    Header: "Props Drilling에 대한 고민",
     Date: "2023년 04월 06일",
-    Tag: "Project",
+    Tag: "React",
   },
 ];
 
-const MoimComponents: Componets[] = [
+const ReactComponents: Componets[] = [
   {
     Component: () => {
       return (
-        <Moim1
-          Header={MoimPost[0].Header}
-          Date={MoimPost[0].Date}
-          Tag={MoimPost[0].Tag}
+        <React1
+          Header={ReactPost[0].Header}
+          Date={ReactPost[0].Date}
+          Tag={ReactPost[0].Tag}
         />
       );
     },
