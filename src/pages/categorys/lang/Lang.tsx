@@ -1,24 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row, Col, Grid } from "antd";
-import { ComponentMeta } from "@storybook/react";
-import {
-  Button,
-  Frame,
-  Toolbar,
-  Window,
-  WindowContent,
-  WindowHeader,
-  Counter,
-  ScrollView,
-} from "react95";
-import styled from "styled-components";
-import Folder from "@/pages/components/Folder";
 import JavaScript1 from "./javascript/JavaScript1";
-import Category from "@/pages/components/CategoryFolder";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
-import PostButton from "@/pages/components/PostButton";
-import PostLayout from "@/pages/PostComponents/PostLayout";
 import JavaScript2 from "./javascript/JavaScript2";
 import JavaScript3 from "./javascript/JavaScript3";
 import JavaScript4 from "./javascript/Javascript4";
@@ -27,27 +11,16 @@ const { useBreakpoint } = Grid;
 
 const LangCategory = () => {
   const screens = useBreakpoint();
-  const [isVisible, setIsVisible] = useState(false);
-
-  const openModal = () => {
-    setIsVisible(true);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    setIsVisible(false);
-    document.body.style.overflow = "auto";
-  };
+  const JavaScriptComponents = [...JSComponents].reverse();
 
   return (
     <CategoryHeader HeaderName="LANGUAGE.">
       <Row>
         <Col xs={12} sm={8} md={6}>
           <CategoryFolder FolderName="JavaScript.">
-            <JavaScript4 />
-            <JavaScript3 />
-            <JavaScript2 />
-            <JavaScript1 />
+            {JavaScriptComponents.map(({ Component }, index) => {
+              return <Component key={index} />;
+            })}
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
@@ -73,3 +46,83 @@ const LangCategory = () => {
 };
 
 export default LangCategory;
+
+interface Componets {
+  Component: React.FunctionComponent;
+}
+
+interface Post {
+  Header: string;
+  Date: string;
+  Tag: string;
+}
+
+const JSPost: Post[] = [
+  {
+    Header: "JavaScript의 변천사",
+    Date: "2023년 05월 05일",
+    Tag: "JavaScript",
+  },
+  {
+    Header: "함수형 프로그래밍, 순수함수",
+    Date: "2023년 05월 06일",
+    Tag: "JavaScript",
+  },
+  {
+    Header: "일급함수, add_maker",
+    Date: "2023년 05월 07일",
+    Tag: "JavaScript",
+  },
+  {
+    Header: "Promise 기본 개념부터~",
+    Date: "2023년 05월 07일",
+    Tag: "JavaScript",
+  },
+];
+
+const JSComponents: Componets[] = [
+  {
+    Component: () => {
+      return (
+        <JavaScript1
+          Header={JSPost[0].Header}
+          Date={JSPost[0].Date}
+          Tag={JSPost[0].Tag}
+        />
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <JavaScript2
+          Header={JSPost[1].Header}
+          Date={JSPost[1].Date}
+          Tag={JSPost[1].Tag}
+        />
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <JavaScript3
+          Header={JSPost[2].Header}
+          Date={JSPost[2].Date}
+          Tag={JSPost[2].Tag}
+        />
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <JavaScript4
+          Header={JSPost[3].Header}
+          Date={JSPost[3].Date}
+          Tag={JSPost[3].Tag}
+        />
+      );
+    },
+  },
+];

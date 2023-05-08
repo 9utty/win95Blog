@@ -13,15 +13,9 @@ interface Post {
   Tag: string;
 }
 
-const Post: Post = {
-  Header: "일급함수, add_maker",
-  Date: "2023년 05월 07일",
-  Tag: "JavaScript",
-};
-
-const JavaScript3 = () => {
+const JavaScript3 = ({ Header, Date, Tag }: Post) => {
   return (
-    <PostTemplate Header={Post.Header} Date={Post.Date} Tag={Post.Tag}>
+    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
       <H2>
         <div>{`일급함수`}</div>
       </H2>
