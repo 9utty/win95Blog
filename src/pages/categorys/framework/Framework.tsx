@@ -13,7 +13,7 @@ const FrameWorkCategory = () => {
     <CategoryHeader HeaderName="FRAMEWORK.">
       <Row>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="JavaScript.">
+          <CategoryFolder FolderName="React.">
             {/* {JavaScriptComponents.map(({ Component }, index) => {
               return <Component key={index} />;
             })} */}
@@ -21,18 +21,12 @@ const FrameWorkCategory = () => {
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="TypeScript.">
+          <CategoryFolder FolderName="React Mative.">
             <div></div>
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C++.">
-            <div></div>
-          </CategoryFolder>
-        </Col>
-        <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C.">
-            {" "}
+          <CategoryFolder FolderName="Next JS.">
             <div></div>
           </CategoryFolder>
         </Col>
