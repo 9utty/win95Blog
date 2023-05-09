@@ -24,7 +24,7 @@ const FrameWorkCategory = () => {
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="React Mative.">
+          <CategoryFolder FolderName="React Native.">
             <div></div>
           </CategoryFolder>
         </Col>
