@@ -12,7 +12,6 @@ import Spacer from "./Spacer";
 import Div from "../PostComponents/Div";
 import TextTag from "../PostComponents/TextTag";
 import TabTag from "../PostComponents/TabTag";
-import Win95Blog1 from "../categorys/project/MyBlog/Win95Blog1";
 import H2 from "../PostComponents/H2";
 import CodeTag from "../PostComponents/Code";
 

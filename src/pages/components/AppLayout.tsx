@@ -77,7 +77,7 @@ const AppLayout = ({ children }: Props) => {
                     alignItems: "center",
                   }}
                 >
-                  구티의 블로그
+                  구티 BLOG.
                 </div>
               </Button>
               {isOpen && <MyBlog func={closeBlog} />}

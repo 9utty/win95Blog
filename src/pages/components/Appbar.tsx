@@ -12,6 +12,7 @@ import {
   styleReset,
 } from "react95";
 import styled, { createGlobalStyle } from "styled-components";
+import MyProfile from "./MyProfile";
 
 const Wrapper = styled.div`
   padding: 5rem;
@@ -20,6 +21,15 @@ const Wrapper = styled.div`
 
 export default function Appbar() {
   const [open, setOpen] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
+
+  const openProfileF = () => {
+    setOpenProfile(true);
+  };
+
+  const closeProfileF = () => {
+    setOpenProfile(false);
+  };
 
   return (
     <>
@@ -51,11 +61,7 @@ export default function Appbar() {
                   }}
                   onClick={() => setOpen(false)}
                 >
-                  <MenuListItem
-                    onClick={() =>
-                      (window.location.href = "https://github.com/9utty")
-                    }
-                  >
+                  <MenuListItem onClick={openProfileF}>
                     <span role="img" aria-label="👨‍💻">
                       👨‍💻
                     </span>
@@ -65,8 +71,7 @@ export default function Appbar() {
                   </MenuListItem>
                   <MenuListItem
                     onClick={() =>
-                      (window.location.href =
-                        "https://github.com/9utty/MenuRecommendation")
+                      (window.location.href = "https://github.com/9utty")
                     }
                   >
                     <span role="img" aria-label="📁">
@@ -98,6 +103,7 @@ export default function Appbar() {
             />
           </Toolbar>
         </Bar>
+        {openProfile && <MyProfile func={closeProfileF} />}
       </div>
     </>
   );
