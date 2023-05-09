@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import tokyoDart from "react95/dist/themes/tokyoDark";
 import original from "react95/dist/themes/original";
@@ -16,6 +16,9 @@ import {
 } from "react95";
 import Appbar from "./Appbar";
 import Link from "next/link";
+import CategoryHeader from "./CategoryHeader";
+import PostLayout from "../PostComponents/PostLayout";
+import MyBlog from "./MyBolg";
 
 const { useBreakpoint } = Grid;
 const { Footer } = Layout;
@@ -31,6 +34,15 @@ const Background = styled.div`
 
 const AppLayout = ({ children }: Props) => {
   const screens = useBreakpoint();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openBlog = () => {
+    setIsOpen(true);
+  };
+  const closeBlog = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div
       style={{
@@ -52,7 +64,7 @@ const AppLayout = ({ children }: Props) => {
         >
           <div style={{ top: "0px" }}>
             <Bar style={{ width: "100vw", height: "40px" }}>
-              <Button>
+              <Button onClick={openBlog}>
                 <div
                   style={{
                     top: "50%",
@@ -68,6 +80,7 @@ const AppLayout = ({ children }: Props) => {
                   구티의 블로그
                 </div>
               </Button>
+              {isOpen && <MyBlog func={closeBlog} />}
             </Bar>
           </div>
           {children}

@@ -80,7 +80,7 @@ const MoimComponents: Componets[] = [
 
 const MyBlogPost: Post[] = [
   {
-    Header: "구리의 블로그!!!!",
+    Header: "구티의 블로그!!!!",
     Date: "2023년 05월 09일",
     Tag: "Blog",
   },
