@@ -10,8 +10,17 @@ interface Post {
   Date: string;
   Tag: string;
 }
+interface JavaScript1Props {
+  Header: string;
+  Date: string;
+  Tag: string;
+}
 
-const JavaScript1 = ({ Header, Date, Tag }: Post) => {
+const JavaScript1: React.FunctionComponent<JavaScript1Props> = ({
+  Header,
+  Date,
+  Tag,
+}: Post) => {
   return (
     <PostTemplate Header={Header} Date={Date} Tag={Tag}>
       <H2>
