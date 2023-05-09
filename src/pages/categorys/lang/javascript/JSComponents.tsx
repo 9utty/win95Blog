@@ -1,10 +1,12 @@
-// @ts-ignore
 import JavaScript1 from "@/pages/categorys/lang/javascript/JavaScript1";
-import { Componets } from "../types/TypeComponent";
 import JavaScript2 from "@/pages/categorys/lang/javascript/JavaScript2";
 import JavaScript3 from "@/pages/categorys/lang/javascript/JavaScript3";
 import JavaScript4 from "@/pages/categorys/lang/javascript/Javascript4";
-import JSPost from "@/datas/JS/JSPost";
+import JSPost from "@/datas/JSPost";
+
+interface Components {
+  Component: React.FunctionComponent;
+}
 
 const JSCom = () => {
   const JavaScriptComponents = [...JSComponents].reverse();
@@ -18,7 +20,7 @@ const JSCom = () => {
   );
 };
 
-const JSComponents: Componets[] = [
+const JSComponents: Components[] = [
   {
     Component: () => {
       return (

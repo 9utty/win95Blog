@@ -1,4 +1,4 @@
-import { Post } from "../types/TypePost";
+import { Post } from "./types/TypePost";
 
 const JSPost: Post[] = [
   {

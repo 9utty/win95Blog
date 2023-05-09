@@ -2,11 +2,8 @@ import React from "react";
 import { Row, Col, Grid } from "antd";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
-import JavaScript1 from "./javascript/JavaScript1";
-import JavaScript2 from "./javascript/JavaScript2";
-import JavaScript3 from "./javascript/JavaScript3";
-import JavaScript4 from "./javascript/Javascript4";
 import JSCom from "./javascript/JSComponents";
+import TSCom from "./typescript/TSComponents";
 
 const { useBreakpoint } = Grid;
 
@@ -23,7 +20,7 @@ const LangCategory = () => {
         </Col>
         <Col xs={12} sm={8} md={6}>
           <CategoryFolder FolderName="TypeScript.">
-            <div></div>
+            <TSCom />
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
