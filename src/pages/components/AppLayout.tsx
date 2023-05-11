@@ -59,11 +59,11 @@ const AppLayout = ({ children }: Props) => {
         <div
           style={{
             width: "100%",
-            height: "93.8%",
+            height: "94vh",
           }}
         >
           <div style={{ top: "0px" }}>
-            <Bar style={{ width: "100vw", height: "40px" }}>
+            <Bar style={{ width: "100vw", height: "5vh" }}>
               <Button onClick={openBlog}>
                 <div
                   style={{
