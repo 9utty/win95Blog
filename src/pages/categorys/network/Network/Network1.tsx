@@ -28,7 +28,7 @@ const Network1 = ({ Header, Date, Tag }: Post) => {
       <TabTag>{`* Interface 식별자`}</TabTag>
       <TextTag>{`- Port Number의 크기는 16bit이다`}</TextTag>
       <TabTag>{`* 0 ~ 65535 범위인데 0과 65535는 안쓴다`}</TabTag>
-      <TabTag>{`2^16 - 2 라고 볼 수 있다`}</TabTag>
+      <TabTag>{`* 2^16 - 2 라고 볼 수 있다`}</TabTag>
       <TextTag>{`- Port Number는 소켓에 바인딩 된다`}</TextTag>
     </PostTemplate>
   );
