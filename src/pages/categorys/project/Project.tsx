@@ -4,6 +4,8 @@ import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
 import Moim1 from "./Moim/Moim1";
 import Win95Blog1 from "./MyBlog/Win95Blog1";
+import { MoimPost } from "@/datas/MoimPost";
+import { MyBlogPost } from "@/datas/MyBlog";
 
 const { useBreakpoint } = Grid;
 
@@ -50,20 +52,6 @@ interface Componets {
   Component: React.FunctionComponent;
 }
 
-interface Post {
-  Header: string;
-  Date: string;
-  Tag: string;
-}
-
-const MoimPost: Post[] = [
-  {
-    Header: "Moim?",
-    Date: "2023년 04월 06일",
-    Tag: "Project",
-  },
-];
-
 const MoimComponents: Componets[] = [
   {
     Component: () => {
@@ -75,14 +63,6 @@ const MoimComponents: Componets[] = [
         />
       );
     },
-  },
-];
-
-const MyBlogPost: Post[] = [
-  {
-    Header: "구티의 블로그!!!!",
-    Date: "2023년 05월 09일",
-    Tag: "Blog",
   },
 ];
 
