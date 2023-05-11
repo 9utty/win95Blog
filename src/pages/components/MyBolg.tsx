@@ -14,6 +14,7 @@ import TextTag from "../PostComponents/TextTag";
 import TabTag from "../PostComponents/TabTag";
 import H2 from "../PostComponents/H2";
 import CodeTag from "../PostComponents/Code";
+import TextColor from "../PostComponents/TextColor";
 
 const { useBreakpoint } = Grid;
 
@@ -57,11 +58,13 @@ const MyBlog = ({ func }: Props) => {
                 shadow={false}
                 style={{ width: "100%", height: "44vh" }}
               >
-                <H2>{`구티의 블로그를 소개합니다!`}</H2>
+                <H2>
+                  <TextColor color="green">{`🧑🏼‍💻 구티의 블로그를 소개합니다! 👏`}</TextColor>
+                </H2>
                 <TextTag>
                   {`- 이 블로그는 Window95 스타일로 만들고자 react95(스타일컴포넌트)를 사용해 만들고, NextJS를 이용해 정적페이지로 빌드 후에 Netlify를 이용해 배포하는 블로그입니다`}
                 </TextTag>
-                <H2>{`하나하나의 포스팅은?`}</H2>
+                <H2>{`💯 하나하나의 포스팅은?`}</H2>
                 <TextTag>{`- 하나하나 포스팅은 컴포넌트로 만들어졌습니다`}</TextTag>
                 <CodeTag
                   code={`import CodeTag from "@/pages/PostComponents/Code";
