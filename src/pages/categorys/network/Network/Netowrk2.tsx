@@ -26,7 +26,7 @@ const Network2 = ({ Header, Date, Tag }: Post) => {
         {`* MAC 주소는 변경 가능할까?`}{" "}
         <TabTag>{`~ Yes, 변경 가능하다`}</TabTag>
       </TabTag>
-      <TextTag>{`IP Address(IPv4, IPv6)`}</TextTag>
+      <TextTag>{`- IP Address(IPv4, IPv6)`}</TextTag>
       <TabTag>
         {`* Host의 식별자이다`}
         <TabTag>{`~ "Host"는 쉽게 생각하면 인터넷에 연결이된 컴퓨터라고 생각할 수 있다`}</TabTag>
