@@ -3,6 +3,7 @@ import { Row, Col, Grid } from "antd";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
 import React1 from "./react/React1";
+import { ReactPost } from "@/datas/ReactPost";
 
 const { useBreakpoint } = Grid;
 
@@ -44,20 +45,6 @@ export default FrameWorkCategory;
 interface Componets {
   Component: React.FunctionComponent;
 }
-
-interface Post {
-  Header: string;
-  Date: string;
-  Tag: string;
-}
-
-const ReactPost: Post[] = [
-  {
-    Header: "Props Drilling에 대한 고민",
-    Date: "2023년 04월 06일",
-    Tag: "React",
-  },
-];
 
 const ReactComponents: Componets[] = [
   {
