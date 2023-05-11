@@ -4,6 +4,7 @@ import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
 import { NetworkPost } from "@/datas/NetworkPost";
 import Network1 from "./Network/Network1";
+import Network2 from "./Network/Netowrk2";
 
 const { useBreakpoint } = Grid;
 
@@ -34,6 +35,17 @@ const NetowrkComponents: Componets[] = [
           Header={NetworkPost[0].Header}
           Date={NetworkPost[0].Date}
           Tag={NetworkPost[0].Tag}
+        />
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <Network2
+          Header={NetworkPost[1].Header}
+          Date={NetworkPost[1].Date}
+          Tag={NetworkPost[1].Tag}
         />
       );
     },
