@@ -7,6 +7,7 @@ import LangCategory from "./categorys/lang/Lang";
 import ProgressBars from "./components/ProgressBarMain";
 import ProjectCategory from "./categorys/project/Project";
 import FrameWorkCategory from "./categorys/framework/Framework";
+import Network from "./categorys/network/Network";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -82,6 +83,15 @@ const Components: Component[] = [
       return (
         <Col xs={12} sm={8} md={4}>
           <FrameWorkCategory />
+        </Col>
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <Col xs={12} sm={8} md={4}>
+          <Network />
         </Col>
       );
     },
