@@ -67,7 +67,7 @@ const AppLayout = ({ children }: Props) => {
                     left: "50%",
                     width: "30vw",
                     transform: "translate(0%,0%)",
-                    fontSize: "2rem",
+                    fontSize: "1.6rem",
                     fontFamily: "dunggeunmo-bold",
                     justifyContent: "center",
                     alignItems: "center",
