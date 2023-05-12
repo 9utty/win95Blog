@@ -52,9 +52,9 @@ export default function Appbar() {
                   style={{
                     fontWeight: "bold",
                     fontFamily: "dunggeunmo-bold",
-                    height: "2rem",
+                    height: "2.5rem",
                     width: "6rem",
-                    fontSize: "1rem",
+                    fontSize: "1.2rem",
                     marginBottom: "0.5rem",
                   }}
                 >
@@ -64,7 +64,7 @@ export default function Appbar() {
                     }
                     style={{
                       paddingRight: "5px",
-                      height: "1.5rem",
+                      height: "1.6rem",
                     }}
                   />
                   Start
