@@ -21,16 +21,9 @@ import PostLayout from "../PostComponents/PostLayout";
 import MyBlog from "./MyBolg";
 
 const { useBreakpoint } = Grid;
-const { Footer } = Layout;
 type Props = {
   children: React.ReactNode;
 };
-
-const Background = styled.div`
-  background-color: #008080;
-  width: 100vw;
-  height: 100vh;
-`;
 
 const AppLayout = ({ children }: Props) => {
   const screens = useBreakpoint();
@@ -59,14 +52,14 @@ const AppLayout = ({ children }: Props) => {
         <div
           style={{
             width: "100%",
-            height: "94vh",
+            height: "100%",
           }}
         >
           <div style={{ top: "0px" }}>
-            <Bar style={{ width: "100vw", height: "5vh", maxHeight: "50px" }}>
+            <Bar style={{ width: "100vw", height: "2.5rem" }}>
               <Button
                 onClick={openBlog}
-                style={{ width: "30vw", height: "4.7vh", maxHeight: "49px" }}
+                style={{ width: "30vw", height: "2.3rem" }}
               >
                 <div
                   style={{
@@ -74,7 +67,7 @@ const AppLayout = ({ children }: Props) => {
                     left: "50%",
                     width: "30vw",
                     transform: "translate(0%,0%)",
-                    fontSize: "20px",
+                    fontSize: "2rem",
                     fontFamily: "dunggeunmo-bold",
                     justifyContent: "center",
                     alignItems: "center",

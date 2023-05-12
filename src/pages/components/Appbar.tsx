@@ -43,7 +43,7 @@ export default function Appbar() {
     <>
       <Wrapper screenSize={screens}>
         <div style={{ bottom: "0px" }}>
-          <Bar style={{ width: "100vw", height: "6vh", maxHeight: "73px" }}>
+          <Bar style={{ width: "100vw", height: "3rem" }}>
             <Toolbar style={{ justifyContent: "space-between" }}>
               <div style={{ position: "relative", display: "inline-block" }}>
                 <Button
@@ -52,9 +52,10 @@ export default function Appbar() {
                   style={{
                     fontWeight: "bold",
                     fontFamily: "dunggeunmo-bold",
-                    height: "5vh",
-                    maxHeight: "71px",
-                    width: "7vw",
+                    height: "2rem",
+                    width: "6rem",
+                    fontSize: "1rem",
+                    marginBottom: "0.5rem",
                   }}
                 >
                   <img
@@ -63,8 +64,7 @@ export default function Appbar() {
                     }
                     style={{
                       paddingRight: "5px",
-                      height: "3vh",
-                      maxHeight: "70px",
+                      height: "1.5rem",
                     }}
                   />
                   Start
@@ -115,12 +115,18 @@ export default function Appbar() {
                   </MenuList>
                 )}
               </div>
-
-              <TextInput
-                placeholder="Search..."
-                width={150}
-                style={{ fontFamily: "dunggeunmo" }}
-              />
+              <div
+                style={{
+                  width: "20vw",
+                  height: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                <TextInput
+                  placeholder="Search..."
+                  style={{ fontFamily: "dunggeunmo" }}
+                />
+              </div>
             </Toolbar>
           </Bar>
           {openProfile && <MyProfile func={closeProfileF} />}
