@@ -63,8 +63,11 @@ const AppLayout = ({ children }: Props) => {
           }}
         >
           <div style={{ top: "0px" }}>
-            <Bar style={{ width: "100vw", height: "5vh" }}>
-              <Button onClick={openBlog}>
+            <Bar style={{ width: "100vw", height: "5vh", maxHeight: "50px" }}>
+              <Button
+                onClick={openBlog}
+                style={{ width: "30vw", height: "4.7vh", maxHeight: "49px" }}
+              >
                 <div
                   style={{
                     top: "50%",
