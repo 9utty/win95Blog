@@ -56,10 +56,15 @@ const AppLayout = ({ children }: Props) => {
           }}
         >
           <div style={{ top: "0px" }}>
-            <Bar style={{ width: "100vw", height: "2.5rem" }}>
+            <Bar
+              style={{ width: "100vw", height: screens.md ? "2.5rem" : "50px" }}
+            >
               <Button
                 onClick={openBlog}
-                style={{ width: "30vw", height: "2.3rem" }}
+                style={{
+                  width: "30vw",
+                  height: screens.md ? "2.3rem" : "45px",
+                }}
               >
                 <div
                   style={{
@@ -67,7 +72,7 @@ const AppLayout = ({ children }: Props) => {
                     left: "50%",
                     width: "30vw",
                     transform: "translate(0%,0%)",
-                    fontSize: "1.6rem",
+                    fontSize: screens.md ? "1.6rem" : "20px",
                     fontFamily: "dunggeunmo-bold",
                     justifyContent: "center",
                     alignItems: "center",
