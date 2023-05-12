@@ -4,6 +4,7 @@ import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
 import MyBlogComponents from "./MyBlog/MyBlogComponents";
 import MoimComponents from "./Moim/MoimComponents";
+import MenuComponents from "./Menu/MenuComponents";
 
 const { useBreakpoint } = Grid;
 
@@ -25,7 +26,7 @@ const ProjectCategory = () => {
         </Col>
         <Col xs={12} sm={8} md={6}>
           <CategoryFolder FolderName="42메뉴추천.">
-            <div></div>
+            <MenuComponents />
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
