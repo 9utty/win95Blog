@@ -53,7 +53,7 @@ export default function Appbar() {
                     fontWeight: "bold",
                     fontFamily: "dunggeunmo-bold",
                     height: screens.md ? "2.5rem" : "40px",
-                    width: screens.md ? "6rem" : "17vw",
+                    width: screens.md ? "6rem" : "21vw",
                     fontSize: screens.md ? "1.2rem" : "18px",
                     marginBottom: screens.md ? "0.5rem" : "20px",
                   }}
@@ -117,7 +117,7 @@ export default function Appbar() {
               </div>
               <div
                 style={{
-                  width: "20vw",
+                  width: "30vw",
                   height: screens.md ? "2rem" : "40px",
                   marginBottom: screens.md ? "0.5rem" : "20px",
                 }}
