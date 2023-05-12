@@ -1,8 +1,10 @@
 import CodeTag from "@/pages/PostComponents/Code";
 import Div from "@/pages/PostComponents/Div";
 import H2 from "@/pages/PostComponents/H2";
+import ImageTag from "@/pages/PostComponents/ImageTag";
 import PostTemplate from "@/pages/PostComponents/PostTemplate";
 import TabTag from "@/pages/PostComponents/TabTag";
+import TextColor from "@/pages/PostComponents/TextColor";
 import TextTag from "@/pages/PostComponents/TextTag";
 import Spacer from "@/pages/components/Spacer";
 import React from "react";
@@ -73,6 +75,46 @@ const Menu1 = ({ Header, Date, Tag }: Post) => {
         </TabTag>
       </TextTag>
       <H2>{`각각의 페이지 소개`}</H2>
+      <TextTag>
+        {`1. 로딩액션 페이지!`}
+        <ImageTag
+          Url={
+            "https://user-images.githubusercontent.com/86397600/237934436-a7b84fda-7e27-458c-af65-8ae01921fd3f.png"
+          }
+        />
+        <TabTag>
+          {`* 만든이유는 별다른 이유 없다... 그냥 이뻐보여서?ㅎㅎ...`}
+        </TabTag>
+      </TextTag>
+      <TextTag>
+        {`2. 메인 페이지!`}
+        <ImageTag
+          Url={
+            "https://user-images.githubusercontent.com/86397600/237934384-da03b52a-59e0-4810-a23b-b78b11ace477.png"
+          }
+        />
+        <TabTag>
+          {`* 메뉴추천 아이콘을 누르면 메뉴추천을 해주는 페이지가 모달로 나오게 된다`}
+        </TabTag>
+      </TextTag>
+      <TextTag>
+        {`3. 메뉴추천`}
+        <ImageTag Url="https://user-images.githubusercontent.com/86397600/237934473-005dc1de-fc58-4099-ae3e-11fd28c453c4.png" />
+        <TabTag>{`* 점메추, 저메추 메뉴를 고를 수 있다!`}</TabTag>
+        <TabTag>
+          {`* "추천시작"버튼을 누르면 rand함수를 이용해 렌덤의 인덱스 숫자를 뽑게 되고, Menu[] 로 만들어둔 정적데이터에서 인덱스번호로 찾게 된다`}
+        </TabTag>
+        <Spacer />
+        <ImageTag Url="https://user-images.githubusercontent.com/86397600/237934512-321cc7d5-ce57-4b31-b8d0-88089a17f6a4.png" />
+        <TabTag>
+          {`* 숫자전광판에 나오는 숫자는 Index 번호이고, 오늘의 저녁메뉴는? 한식 / 부침개 (key / value)를 나타낸다!`}
+        </TabTag>
+      </TextTag>
+      <Div />
+      <TextTag>
+        <TextColor color="green">{`이 프로젝트로 인해서 지금의 블로그의 베이스를 만들게 되었습니다! 어이없는 이유로 시작된 프로젝트고 재밌게 만들어갈 수 있었던 좋은 프로젝트였습니다!`}</TextColor>
+      </TextTag>
+      <Div />
     </PostTemplate>
   );
 };
