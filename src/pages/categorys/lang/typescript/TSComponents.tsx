@@ -1,12 +1,18 @@
 import TSPost from "@/datas/TSPost";
 import TypeScript1 from "./TypeScript1";
 
-interface Components {
+interface Component {
   Component: React.FunctionComponent;
 }
 
-const TSCom = () => {
-  const TypeScriptComponents = [...TSComponents].reverse();
+interface Props {
+  index?: number;
+}
+
+const TSCom = (props: Props) => {
+  const TypeScriptComponents = props.index
+    ? [TSComponents[props.index]]
+    : TSComponents.reverse();
 
   return (
     <>
@@ -17,7 +23,7 @@ const TSCom = () => {
   );
 };
 
-const TSComponents: Components[] = [
+const TSComponents: Component[] = [
   {
     Component: () => {
       return (

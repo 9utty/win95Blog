@@ -2,8 +2,15 @@ import { MenuPost } from "@/datas/MenuPost";
 import React from "react";
 import Menu1 from "./Menu1";
 
-const MenuComponents = () => {
-  const MenuCom = [...MenuComponent].reverse();
+interface Props {
+  index?: number;
+}
+
+const MenuComponents = (props: Props) => {
+  const MenuCom = props.index
+    ? [MenuComponent[props.index]]
+    : [...MenuComponent].reverse();
+
   return (
     <>
       {MenuCom.map(({ Component }, index) => {

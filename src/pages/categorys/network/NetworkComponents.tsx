@@ -3,8 +3,15 @@ import Network1 from "./Network/Network1";
 import Network2 from "./Network/Netowrk2";
 import { NetworkPost } from "@/datas/NetworkPost";
 
-const NetworkComponents = () => {
-  const NetworkCom = [...NetowrkComponent].reverse();
+interface Props {
+  index?: number;
+}
+
+const NetworkComponents = (props: Props) => {
+  const NetworkCom = props.index
+    ? [NetowrkComponent[props.index]]
+    : [...NetowrkComponent].reverse();
+
   return (
     <>
       {NetworkCom.map(({ Component }, index) => {
@@ -16,11 +23,11 @@ const NetworkComponents = () => {
 
 export default NetworkComponents;
 
-interface Componets {
+interface Componet {
   Component: React.FunctionComponent;
 }
 
-const NetowrkComponent: Componets[] = [
+const NetowrkComponent: Componet[] = [
   {
     Component: () => {
       return (

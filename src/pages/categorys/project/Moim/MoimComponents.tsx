@@ -2,8 +2,15 @@ import React from "react";
 import Moim1 from "./Moim1";
 import { MoimPost } from "@/datas/MoimPost";
 
-const MoimComponents = () => {
-  const MoimCom = [...MoimComponent].reverse();
+interface Props {
+  index?: number;
+}
+
+const MoimComponents = (props: Props) => {
+  const MoimCom = props.index
+    ? [MoimComponent[props.index]]
+    : [...MoimComponent].reverse();
+
   return (
     <>
       {MoimCom.map(({ Component }, index) => {
@@ -15,11 +22,11 @@ const MoimComponents = () => {
 
 export default MoimComponents;
 
-interface Componets {
+interface Componet {
   Component: React.FunctionComponent;
 }
 
-const MoimComponent: Componets[] = [
+const MoimComponent: Componet[] = [
   {
     Component: () => {
       return (
