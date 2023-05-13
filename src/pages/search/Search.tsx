@@ -27,7 +27,7 @@ import MenuComponents from "../categorys/project/Menu/MenuComponents";
 
 const { useBreakpoint } = Grid;
 
-const searchMetadate = (metadata: Post[], value: string) => {
+const searchMetadata = (metadata: Post[], value: string) => {
   return metadata
     .map((item, index) => {
       if (item.Header.includes(value) || item.Tag.includes(value)) {
@@ -61,19 +61,19 @@ const Search = () => {
 
     if (value !== "") {
       const newTimer = setTimeout(() => {
-        const jsIndex = searchMetadate(JSPost, value);
+        const jsIndex = searchMetadata(JSPost, value);
         setJsResult(jsIndex);
-        const tsIndex = searchMetadate(TSPost, value);
+        const tsIndex = searchMetadata(TSPost, value);
         setTsResult(tsIndex);
-        const moimIndex = searchMetadate(MoimPost, value);
+        const moimIndex = searchMetadata(MoimPost, value);
         setMoimResult(moimIndex);
-        const myBlogIndex = searchMetadate(MyBlogPost, value);
+        const myBlogIndex = searchMetadata(MyBlogPost, value);
         setMyBlogResult(myBlogIndex);
-        const networkIndex = searchMetadate(NetworkPost, value);
+        const networkIndex = searchMetadata(NetworkPost, value);
         setNetworkResult(networkIndex);
-        const reactIndex = searchMetadate(ReactPost, value);
+        const reactIndex = searchMetadata(ReactPost, value);
         setReactResult(reactIndex);
-        const menuIndex = searchMetadate(MenuPost, value);
+        const menuIndex = searchMetadata(MenuPost, value);
         setMenuResult(menuIndex);
         setIsOpen(true);
         document.body.style.overflow = "hidden";
