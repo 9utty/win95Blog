@@ -8,7 +8,7 @@ import ProgressBars from "./components/ProgressBarMain";
 import ProjectCategory from "./categorys/project/Project";
 import FrameWorkCategory from "./categorys/framework/Framework";
 import Network from "./categorys/network/Network";
-
+import google
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
