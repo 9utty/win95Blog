@@ -14,6 +14,7 @@ import {
 import styled, { createGlobalStyle } from "styled-components";
 import MyProfile from "./MyProfile";
 import { Grid } from "antd";
+import Search from "../search/Search";
 
 interface IWrapperProps {
   screenSize: Record<string, boolean>;
@@ -115,18 +116,7 @@ export default function Appbar() {
                   </MenuList>
                 )}
               </div>
-              <div
-                style={{
-                  width: "30vw",
-                  height: screens.md ? "2rem" : "40px",
-                  marginBottom: screens.md ? "0.5rem" : "20px",
-                }}
-              >
-                <TextInput
-                  placeholder="Search..."
-                  style={{ fontFamily: "dunggeunmo" }}
-                />
-              </div>
+              <Search />
             </Toolbar>
           </Bar>
           {openProfile && <MyProfile func={closeProfileF} />}

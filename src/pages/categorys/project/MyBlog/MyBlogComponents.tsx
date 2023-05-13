@@ -2,8 +2,15 @@ import { MyBlogPost } from "@/datas/MyBlog";
 import React from "react";
 import Win95Blog1 from "./Win95Blog1";
 
-const MyBlogComponents = () => {
-  const MyBlogCom = [...MyBlogComponent].reverse();
+interface Props {
+  index?: number;
+}
+
+const MyBlogComponents = (props: Props) => {
+  const MyBlogCom = props.index
+    ? [MyBlogComponent[props.index]]
+    : [...MyBlogComponent].reverse();
+
   return (
     <>
       {MyBlogCom.map(({ Component }, index) => {
@@ -15,11 +22,11 @@ const MyBlogComponents = () => {
 
 export default MyBlogComponents;
 
-interface Componets {
+interface Componet {
   Component: React.FunctionComponent;
 }
 
-const MyBlogComponent: Componets[] = [
+const MyBlogComponent: Componet[] = [
   {
     Component: () => {
       return (

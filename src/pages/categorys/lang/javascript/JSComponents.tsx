@@ -1,15 +1,22 @@
+import React from "react";
 import JavaScript1 from "@/pages/categorys/lang/javascript/JavaScript1";
 import JavaScript2 from "@/pages/categorys/lang/javascript/JavaScript2";
 import JavaScript3 from "@/pages/categorys/lang/javascript/JavaScript3";
 import JavaScript4 from "@/pages/categorys/lang/javascript/Javascript4";
 import JSPost from "@/datas/JSPost";
 
-interface Components {
+interface Component {
   Component: React.FunctionComponent;
 }
 
-const JSCom = () => {
-  const JavaScriptComponents = [...JSComponents].reverse();
+interface Props {
+  index?: number;
+}
+
+const JSCom = (props: Props) => {
+  const JavaScriptComponents = props.index
+    ? [JSComponents[props.index]]
+    : [...JSComponents].reverse();
 
   return (
     <>
@@ -20,7 +27,7 @@ const JSCom = () => {
   );
 };
 
-const JSComponents: Components[] = [
+const JSComponents: Component[] = [
   {
     Component: () => {
       return (
