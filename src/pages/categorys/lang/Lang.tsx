@@ -4,6 +4,8 @@ import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
 import JSCom from "./javascript/JSComponents";
 import TSCom from "./typescript/TSComponents";
+import JSPost from "@/datas/JSPost";
+import TSPost from "@/datas/TSPost";
 
 const { useBreakpoint } = Grid;
 
@@ -14,18 +16,13 @@ const LangCategory = () => {
     <CategoryHeader HeaderName="LANGUAGE.">
       <Row>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="JavaScript.">
+          <CategoryFolder FolderName={"JavaScript." + `(${JSPost.length})`}>
             <JSCom />
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="TypeScript.">
+          <CategoryFolder FolderName={"TypeScript." + `(${TSPost.length})`}>
             <TSCom />
-          </CategoryFolder>
-        </Col>
-        <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="C++.">
-            <div></div>
           </CategoryFolder>
         </Col>
         <Col xs={12} sm={8} md={6}>
