@@ -15,7 +15,7 @@ const FrameWorkCategory = () => {
     <CategoryHeader HeaderName="FRAMEWORK.">
       <Row>
         <Col xs={12} sm={8} md={6}>
-          <CategoryFolder FolderName="React.">
+          <CategoryFolder FolderName={"React." + `(${ReactPost.length})`}>
             <ReactCom />
           </CategoryFolder>
         </Col>
