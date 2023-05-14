@@ -95,7 +95,7 @@ export default PostForm;
                   lang={"javascript"}
                 />
                 <TabTag>
-                  {`* 이런식의 Form 을 만들어두고 각각 필요한 컴퍼넌트들을 마크다운처럼 보이기 위해서 재사용 가능한 컴포넌트들을 만들어서 사용했습니다`}
+                  {`* 이런식의 Form 을 만들어두고 각각 필요한 컴포넌트들을 마크다운처럼 보이기 위해서 재사용 가능한 컴포넌트들을 만들어서 사용했습니다`}
                 </TabTag>
                 <TabTag>{`H1, H2, H3, TextTag, ImageTag, TabTag, CodeTag 등`}</TabTag>
                 <H2>{`예시 코드`}</H2>
