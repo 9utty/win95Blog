@@ -50,4 +50,15 @@ const NetowrkComponent: Componet[] = [
       );
     },
   },
+  {
+    Component: () => {
+      return (
+        <Network3
+          Header={NetworkPost[2].Header}
+          Date={NetworkPost[2].Date}
+          Tag={NetworkPost[2].Tag}
+        />
+      );
+    },
+  },
 ];

@@ -11,4 +11,9 @@ export const NetworkPost: Post[] = [
     Date: "2023년 04월 10일",
     Tag: "Network",
   },
+  {
+    Header: "Host, Switch, Network의 관계",
+    Date: "2023년 04월 12일",
+    Tag: "Network",
+  },
 ];
