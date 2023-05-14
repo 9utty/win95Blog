@@ -44,7 +44,12 @@ export default function Appbar() {
     <>
       <Wrapper screenSize={screens}>
         <div style={{ bottom: "0px" }}>
-          <Bar style={{ width: "100vw", height: screens.md ? "3rem" : "50px" }}>
+          <Bar
+            style={{
+              width: "100vw",
+              height: screens.md ? "3.2rem" : "50px",
+            }}
+          >
             <Toolbar style={{ justifyContent: "space-between" }}>
               <div style={{ position: "relative", display: "inline-block" }}>
                 <Button
@@ -54,9 +59,9 @@ export default function Appbar() {
                     fontWeight: "bold",
                     fontFamily: "dunggeunmo-bold",
                     height: screens.md ? "2.5rem" : "40px",
-                    width: screens.md ? "6rem" : "21vw",
-                    fontSize: screens.md ? "1.2rem" : "18px",
-                    marginBottom: screens.md ? "0.5rem" : "20px",
+                    width: screens.md ? "6rem" : "90px",
+                    fontSize: screens.md ? "1.2rem" : "19px",
+                    marginBottom: "20px",
                   }}
                 >
                   <img
@@ -65,7 +70,7 @@ export default function Appbar() {
                     }
                     style={{
                       paddingRight: "5px",
-                      height: screens.md ? "1.6rem" : "20px",
+                      height: screens.md ? "1.6rem" : "25px",
                     }}
                   />
                   Start
