@@ -16,4 +16,9 @@ export const NetworkPost: Post[] = [
     Date: "2023년 04월 12일",
     Tag: "Network",
   },
+  {
+    Header: "IPv4주소 체계에 대한 암기사항",
+    Date: "2023년 04월 12일",
+    Tag: "Network",
+  },
 ];
