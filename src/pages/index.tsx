@@ -13,22 +13,19 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div>
-      {" "}
+    <div
+      style={{
+        backgroundColor: "#008080",
+        marginLeft: -8,
+        marginRight: -3,
+        marginTop: -8,
+        marginBottom: -10,
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
       {isLoading ? (
-        <div
-          style={{
-            backgroundColor: "#008080",
-            marginLeft: -8,
-            marginRight: -3,
-            marginTop: -8,
-            marginBottom: -10,
-            width: "100vw",
-            height: "100vh",
-          }}
-        >
-          <ProgressBars func={setIsLoading} />
-        </div>
+        <ProgressBars func={setIsLoading} />
       ) : (
         <div>
           <AppLayout>
