@@ -1,6 +1,7 @@
 import React from "react";
 import React1 from "./React1";
 import { ReactPost } from "@/datas/ReactPost";
+import React2 from "./React2";
 
 interface Props {
   index?: number;
@@ -34,6 +35,17 @@ const ReactComponent: Componets[] = [
           Header={ReactPost[0].Header}
           Date={ReactPost[0].Date}
           Tag={ReactPost[0].Tag}
+        />
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <React2
+          Header={ReactPost[1].Header}
+          Date={ReactPost[1].Date}
+          Tag={ReactPost[1].Tag}
         />
       );
     },

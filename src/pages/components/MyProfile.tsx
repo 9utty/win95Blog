@@ -42,7 +42,7 @@ const MyProfile = ({ func }: Props) => {
         >
           <WindowHeader
             className="window-title"
-            style={{ justifyContent: "space-between", display: "flex" }}
+            style={{ justifyContent: "space-around", display: "flex" }}
           >
             <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
               {`9 U T T Y`}
