@@ -39,22 +39,12 @@ const AppLayout = ({ children }: Props) => {
   return (
     <div
       style={{
-        backgroundColor: "#008080",
-        marginLeft: -8,
-        marginRight: -3,
-        marginTop: -8,
-        marginBottom: -10,
         width: "100vw",
         height: "100vh",
       }}
     >
       <ThemeProvider theme={original}>
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
+        <div style={{ height: "91%" }}>
           <div style={{ top: "0px" }}>
             <Bar
               style={{ width: "100vw", height: screens.md ? "2.5rem" : "50px" }}
@@ -81,6 +71,7 @@ const AppLayout = ({ children }: Props) => {
                   구티 BLOG.
                 </div>
               </Button>
+
               {isOpen && <MyBlog func={closeBlog} />}
             </Bar>
           </div>

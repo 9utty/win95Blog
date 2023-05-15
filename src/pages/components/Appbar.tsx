@@ -43,11 +43,11 @@ export default function Appbar() {
   return (
     <>
       <Wrapper screenSize={screens}>
-        <div style={{ bottom: "0px" }}>
+        <div>
           <Bar
             style={{
               width: "100vw",
-              height: screens.md ? "3.2rem" : "50px",
+              height: screens.md ? "100%" : "100%",
             }}
           >
             <Toolbar style={{ justifyContent: "space-between" }}>
@@ -58,7 +58,7 @@ export default function Appbar() {
                   style={{
                     fontWeight: "bold",
                     fontFamily: "dunggeunmo-bold",
-                    height: screens.md ? "2.5rem" : "40px",
+                    height: screens.md ? "2.rem" : "40px",
                     width: screens.md ? "6rem" : "90px",
                     fontSize: screens.md ? "1.2rem" : "19px",
                     marginBottom: "20px",
