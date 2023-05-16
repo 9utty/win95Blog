@@ -24,6 +24,8 @@ import MyBlogComponents from "../categorys/project/MyBlog/MyBlogComponents";
 import NetworkComponents from "../categorys/network/NetworkComponents";
 import ReactCom from "../categorys/framework/react/ReactComponents";
 import MenuComponents from "../categorys/project/Menu/MenuComponents";
+import AngularPost from "@/datas/AngularPost";
+import AngularCom from "../categorys/framework/angular/AngularCom";
 
 const { useBreakpoint } = Grid;
 
@@ -48,6 +50,7 @@ const Search = () => {
   const [networkResult, setNetworkResult] = useState([] as number[]);
   const [reactResult, setReactResult] = useState([] as number[]);
   const [menuResult, setMenuResult] = useState([] as number[]);
+  const [angularResult, setAngularResult] = useState([] as number[]);
   const [isOpen, setIsOpen] = useState(false);
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
 
@@ -75,6 +78,8 @@ const Search = () => {
         setReactResult(reactIndex);
         const menuIndex = searchMetadata(MenuPost, value);
         setMenuResult(menuIndex);
+        const angularIndex = searchMetadata(AngularPost, value);
+        setAngularResult(angularIndex);
         setIsOpen(true);
         document.body.style.overflow = "hidden";
       }, 500);
@@ -87,6 +92,7 @@ const Search = () => {
       setNetworkResult([]);
       setReactResult([]);
       setMenuResult([]);
+      setAngularResult([]);
       setIsOpen(false);
     }
   };
@@ -100,6 +106,7 @@ const Search = () => {
     setNetworkResult([]);
     setReactResult([]);
     setMenuResult([]);
+    setAngularResult([]);
     setInput("");
     document.body.style.overflow = "auto";
   };
@@ -174,6 +181,9 @@ const Search = () => {
                   })}
                   {menuResult.map((index) => {
                     return <MenuComponents index={index} key={index} />;
+                  })}
+                  {angularResult.map((index) => {
+                    return <AngularCom index={index} key={index} />;
                   })}
                 </ScrollView>
               </Row>

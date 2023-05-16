@@ -1,6 +1,6 @@
 import { Post } from "./types/TypePost";
 
-const JSPost: Post[] = [
+const AngularPost: Post[] = [
   //   {
   //     Header: "JavaScript의 변천사",
   //     Date: "2023년 05월 05일",
@@ -8,4 +8,4 @@ const JSPost: Post[] = [
   //   },
 ];
 
-export default JSPost;
+export default AngularPost;
