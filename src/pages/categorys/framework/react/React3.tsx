@@ -13,7 +13,7 @@ interface Post {
   Tag: string;
 }
 
-const PostForm = ({ Header, Date, Tag }: Post) => {
+const React3 = ({ Header, Date, Tag }: Post) => {
   return (
     <PostTemplate Header={Header} Date={Date} Tag={Tag}>
       <H2>{`애플리케이션의 정의`}</H2>
@@ -56,4 +56,4 @@ const PostForm = ({ Header, Date, Tag }: Post) => {
   );
 };
 
-export default PostForm;
+export default React3;
