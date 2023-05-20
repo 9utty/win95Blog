@@ -1,15 +1,14 @@
-import { Grid, Modal, Row } from "antd";
+import { Grid, Row } from "antd";
 import React, { useState } from "react";
 import {
   Button,
-  Frame,
-  Toolbar,
   Window,
   WindowContent,
   WindowHeader,
-  Counter,
   ScrollView,
 } from "react95";
+import WindowIcon from "../components/WindowIcon";
+import Modal from "../components/ModalWrapper";
 
 const HackerNewsURL = "https://api.hnpwa.com/v0/news/1.json";
 const { useBreakpoint } = Grid;
@@ -20,14 +19,21 @@ const HackerNews = () => {
 
   const openModal = () => {
     setIsOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setIsOpen(false);
+    document.body.style.overflow = "auto";
   };
 
   return (
     <div>
+      <WindowIcon
+        IconName="해커뉴스"
+        func={openModal}
+        ImageUrl="https://user-images.githubusercontent.com/86397600/239678037-d00b07a4-5575-4b01-9907-09e69ccce985.png"
+      />
       {isOpen && (
         <Modal>
           <Window
@@ -63,7 +69,9 @@ const HackerNews = () => {
                 <ScrollView
                   shadow={false}
                   style={{ width: "100%", height: "44vh" }}
-                ></ScrollView>
+                >
+                  <div>굿굿</div>
+                </ScrollView>
               </Row>
             </WindowContent>
           </Window>

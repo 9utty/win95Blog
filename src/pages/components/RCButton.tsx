@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Image } from "antd";
+import React from "react";
+import { Image } from "antd";
 
 interface props {
   func: () => void;
