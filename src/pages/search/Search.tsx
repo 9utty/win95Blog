@@ -24,6 +24,9 @@ import MyBlogComponents from "../categorys/project/MyBlog/MyBlogComponents";
 import NetworkComponents from "../categorys/network/NetworkComponents";
 import ReactCom from "../categorys/framework/react/ReactComponents";
 import MenuComponents from "../categorys/project/Menu/MenuComponents";
+import AngularPost from "@/datas/AngularPost";
+import AngularCom from "../categorys/framework/angular/AngularCom";
+import Modal from "../components/ModalWrapper";
 
 const { useBreakpoint } = Grid;
 
@@ -48,6 +51,7 @@ const Search = () => {
   const [networkResult, setNetworkResult] = useState([] as number[]);
   const [reactResult, setReactResult] = useState([] as number[]);
   const [menuResult, setMenuResult] = useState([] as number[]);
+  const [angularResult, setAngularResult] = useState([] as number[]);
   const [isOpen, setIsOpen] = useState(false);
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
 
@@ -75,6 +79,8 @@ const Search = () => {
         setReactResult(reactIndex);
         const menuIndex = searchMetadata(MenuPost, value);
         setMenuResult(menuIndex);
+        const angularIndex = searchMetadata(AngularPost, value);
+        setAngularResult(angularIndex);
         setIsOpen(true);
         document.body.style.overflow = "hidden";
       }, 500);
@@ -87,6 +93,7 @@ const Search = () => {
       setNetworkResult([]);
       setReactResult([]);
       setMenuResult([]);
+      setAngularResult([]);
       setIsOpen(false);
     }
   };
@@ -100,6 +107,7 @@ const Search = () => {
     setNetworkResult([]);
     setReactResult([]);
     setMenuResult([]);
+    setAngularResult([]);
     setInput("");
     document.body.style.overflow = "auto";
   };
@@ -119,7 +127,7 @@ const Search = () => {
         style={{ fontFamily: "dunggeunmo" }}
       />
       {isOpen && (
-        <ModalWrapper>
+        <Modal>
           <Window
             className="window"
             style={{
@@ -175,79 +183,17 @@ const Search = () => {
                   {menuResult.map((index) => {
                     return <MenuComponents index={index} key={index} />;
                   })}
+                  {angularResult.map((index) => {
+                    return <AngularCom index={index} key={index} />;
+                  })}
                 </ScrollView>
               </Row>
             </WindowContent>
           </Window>
-        </ModalWrapper>
+        </Modal>
       )}
     </div>
   );
 };
 
 export default Search;
-
-const ModalWrapper = styled.div`
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .window-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .close-icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-left: -1px;
-    margin-top: -1px;
-    transform: rotateZ(45deg);
-    position: relative;
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      background: ${({ theme }) => theme.materialText};
-    }
-    &:before {
-      height: 100%;
-      width: 3px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    &:after {
-      height: 3px;
-      width: 100%;
-      left: 0px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  }
-
-  .window {
-    width: 400px;
-    min-height: 200px;
-  }
-
-  .window:nth-child(2) {
-    margin: 2rem;
-  }
-
-  .footer {
-    display: block;
-    margin: 0.25rem;
-    height: 31px;
-    line-height: 31px;
-    padding-left: 0.25rem;
-  }
-`;

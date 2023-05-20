@@ -8,6 +8,7 @@ import ProgressBars from "./components/ProgressBarMain";
 import ProjectCategory from "./categorys/project/Project";
 import FrameWorkCategory from "./categorys/framework/Framework";
 import Network from "./categorys/network/Network";
+import HackerNews from "./hackerNews/HackerNews";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -53,6 +54,15 @@ const Components: Component[] = [
       return (
         <Col xs={12} sm={8} md={4}>
           <Recommendation />
+        </Col>
+      );
+    },
+  },
+  {
+    Component: () => {
+      return (
+        <Col xs={12} sm={8} md={4}>
+          <HackerNews />
         </Col>
       );
     },

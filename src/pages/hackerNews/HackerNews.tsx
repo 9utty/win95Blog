@@ -1,50 +1,40 @@
+import { Grid, Row } from "antd";
 import React, { useState } from "react";
-import { Row, Col, Grid, Divider } from "antd";
-import { ComponentMeta } from "@storybook/react";
 import {
   Button,
-  Frame,
-  Toolbar,
   Window,
   WindowContent,
   WindowHeader,
-  Counter,
   ScrollView,
 } from "react95";
-import styled from "styled-components";
-import PostButton from "../components/PostButton";
-import TextTag from "./TextTag";
-import Spacer from "../components/Spacer";
-import TabTag from "./TabTag";
-import Div from "./Div";
+import WindowIcon from "../components/WindowIcon";
 import Modal from "../components/ModalWrapper";
 
-interface Props {
-  Header: string;
-  Date: string;
-  children: React.ReactNode;
-}
-
+const HackerNewsURL = "https://api.hnpwa.com/v0/news/1.json";
 const { useBreakpoint } = Grid;
 
-const PostLayout = ({ Header, Date, children }: Props) => {
+const HackerNews = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const screens = useBreakpoint();
-  const [isVisible, setIsVisible] = useState(false);
 
   const openModal = () => {
-    setIsVisible(true);
+    setIsOpen(true);
     document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
-    setIsVisible(false);
+    setIsOpen(false);
     document.body.style.overflow = "auto";
   };
 
   return (
     <div>
-      <PostButton Header={Header} Date={Date} func={openModal} />
-      {isVisible && (
+      <WindowIcon
+        IconName="해커뉴스"
+        func={openModal}
+        ImageUrl="https://user-images.githubusercontent.com/86397600/239678037-d00b07a4-5575-4b01-9907-09e69ccce985.png"
+      />
+      {isOpen && (
         <Modal>
           <Window
             className="window"
@@ -64,7 +54,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
               style={{ justifyContent: "space-between", display: "flex" }}
             >
               <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
-                {`${Header}`}
+                Hacker News
               </span>
               <Button style={{ marginTop: "3px" }} onClick={closeModal}>
                 <span
@@ -80,22 +70,7 @@ const PostLayout = ({ Header, Date, children }: Props) => {
                   shadow={false}
                   style={{ width: "100%", height: "44vh" }}
                 >
-                  {children}
-                  <Spacer />
-                  <Spacer />
-                  <Spacer />
-                  <Spacer />
-                  <Div />
-                  <TextTag>
-                    <TabTag>
-                      <TabTag>개인 공부 기록용 블로그입니다</TabTag>
-                    </TabTag>
-                    <TabTag>
-                      <TabTag>잘못된 내용이 있다면 꼭 알려주세요!</TabTag>
-                    </TabTag>
-                  </TextTag>
-
-                  <Spacer />
+                  <div>굿굿</div>
                 </ScrollView>
               </Row>
             </WindowContent>
@@ -106,4 +81,4 @@ const PostLayout = ({ Header, Date, children }: Props) => {
   );
 };
 
-export default PostLayout;
+export default HackerNews;
