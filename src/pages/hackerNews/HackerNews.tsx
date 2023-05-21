@@ -9,6 +9,7 @@ import {
 } from "react95";
 import WindowIcon from "../components/WindowIcon";
 import Modal from "../components/ModalWrapper";
+import { GetStaticProps } from "next";
 
 const HackerNewsURL = "https://api.hnpwa.com/v0/news/1.json";
 const { useBreakpoint } = Grid;
@@ -82,3 +83,9 @@ const HackerNews = () => {
 };
 
 export default HackerNews;
+
+const getStaticProps: GetStaticProps = async () => {
+  const res = await fetch(HackerNewsURL);
+  const result = await res.json();
+  return result;
+};
