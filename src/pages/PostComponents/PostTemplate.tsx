@@ -12,6 +12,8 @@ interface Post {
   Date: string;
   Tag: string;
   children: React.ReactNode;
+  MainURL?: string;
+  SubURL?: string;
 }
 
 const PostTemplate = (props: Post) => {
@@ -20,7 +22,12 @@ const PostTemplate = (props: Post) => {
 
   return (
     <div>
-      <PostLayout Header={Header} Date={Date}>
+      <PostLayout
+        Header={Header}
+        Date={Date}
+        MainURL={props.MainURL}
+        SubURL={props.SubURL}
+      >
         <div style={{ marginRight: "10px", marginLeft: "10px" }}>
           <TextTag>
             <div

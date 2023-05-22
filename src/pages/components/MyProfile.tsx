@@ -43,13 +43,27 @@ const MyProfile = ({ func }: Props) => {
         >
           <WindowHeader
             className="window-title"
-            style={{ justifyContent: "space-around", display: "flex" }}
+            style={{ justifyContent: "space-between", display: "flex" }}
           >
-            <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
+            <span
+              style={{
+                fontFamily: "dunggeunmo-bold",
+                fontSize: "22px",
+                marginLeft: "10px",
+              }}
+            >
               {`9 U T T Y`}
             </span>
-            <Button style={{ marginTop: "3px" }} onClick={func}>
-              <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "20px" }}>
+            <Button
+              style={{ marginTop: "3px", marginRight: "2px" }}
+              onClick={func}
+            >
+              <span
+                style={{
+                  fontFamily: "dunggeunmo-bold",
+                  fontSize: "20px",
+                }}
+              >
                 X
               </span>
             </Button>
