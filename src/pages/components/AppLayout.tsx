@@ -46,38 +46,10 @@ const AppLayout = ({ children }: Props) => {
       <ThemeProvider theme={original}>
         <div style={{ height: "91%" }}>
           <div style={{ top: "0px" }}>
-            <Bar
-              style={{ width: "100vw", height: screens.md ? "2.5rem" : "50px" }}
-            >
-              <Button
-                onClick={openBlog}
-                style={{
-                  width: "30vw",
-                  height: screens.md ? "2.3rem" : "45px",
-                }}
-              >
-                <div
-                  style={{
-                    top: "50%",
-                    left: "50%",
-                    width: "30vw",
-                    transform: "translate(0%,0%)",
-                    fontSize: screens.md ? "1.6rem" : "20px",
-                    fontFamily: "dunggeunmo-bold",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  구티 BLOG.
-                </div>
-              </Button>
-
-              {isOpen && <MyBlog func={closeBlog} />}
-            </Bar>
+            <Appbar />
           </div>
           {children}
         </div>
-        <Appbar />
       </ThemeProvider>
     </div>
   );

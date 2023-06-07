@@ -116,16 +116,17 @@ const Search = () => {
     <div
       style={{
         width: "30vw",
-        height: screens.md ? "2rem" : "40px",
-        marginBottom: screens.md ? "0.5rem" : "20px",
+        height: "50px",
       }}
     >
-      <TextInput
-        value={input}
-        onChange={handleSearch}
-        placeholder="Search..."
-        style={{ fontFamily: "dunggeunmo" }}
-      />
+      <div style={{ height: "100%" }}>
+        <TextInput
+          value={input}
+          onChange={handleSearch}
+          placeholder="Search..."
+          style={{ fontFamily: "dunggeunmo" }}
+        />
+      </div>
       {isOpen && (
         <Modal>
           <Window
