@@ -15,6 +15,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import MyProfile from "./MyProfile";
 import { Grid } from "antd";
 import Search from "../search/Search";
+import MyBlog from "./MyBolg";
 
 interface IWrapperProps {
   screenSize: Record<string, boolean>;
@@ -30,6 +31,8 @@ const { useBreakpoint } = Grid;
 export default function Appbar() {
   const [open, setOpen] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
+  const [isBlog, setIsBlog] = useState(false);
+
   const screens = useBreakpoint();
   let textSize;
   const openProfileF = () => {
@@ -40,14 +43,23 @@ export default function Appbar() {
     setOpenProfile(false);
   };
 
+  const openBlog = () => {
+    setIsBlog(true);
+  };
+
+  const closeBlog = () => {
+    setIsBlog(false);
+  };
+
   return (
     <>
       <Wrapper screenSize={screens}>
-        <div>
+        <div style={{ height: "60px" }}>
           <Bar
             style={{
               width: "100vw",
               height: screens.md ? "100%" : "100%",
+              paddingTop: "3px",
             }}
           >
             <Toolbar style={{ justifyContent: "space-between" }}>
@@ -58,9 +70,9 @@ export default function Appbar() {
                   style={{
                     fontWeight: "bold",
                     fontFamily: "dunggeunmo-bold",
-                    height: screens.md ? "2.rem" : "40px",
-                    width: screens.md ? "6rem" : "90px",
-                    fontSize: screens.md ? "1.2rem" : "19px",
+                    height: "40px",
+                    width: "120px",
+                    fontSize: "25px",
                     marginBottom: "20px",
                   }}
                 >
@@ -70,7 +82,7 @@ export default function Appbar() {
                     }
                     style={{
                       paddingRight: "5px",
-                      height: screens.md ? "1.6rem" : "25px",
+                      height: "30px",
                     }}
                   />
                   Start
@@ -79,12 +91,21 @@ export default function Appbar() {
                   <MenuList
                     style={{
                       position: "absolute",
-                      left: "0",
-                      bottom: "100%",
+                      left: "-6px",
+                      top: "13px",
                       width: "30vw",
+                      zIndex: "100",
                     }}
                     onClick={() => setOpen(false)}
                   >
+                    <MenuListItem onClick={openBlog}>
+                      <span role="img" aria-label="👨">
+                        👨
+                      </span>
+                      <div style={{ fontFamily: "dunggeunmo-bold" }}>
+                        MyBlog?
+                      </div>
+                    </MenuListItem>
                     <MenuListItem onClick={openProfileF}>
                       <span role="img" aria-label="👨‍💻">
                         👨‍💻
@@ -125,6 +146,7 @@ export default function Appbar() {
             </Toolbar>
           </Bar>
           {openProfile && <MyProfile func={closeProfileF} />}
+          {isBlog && <MyBlog func={closeBlog} />}
         </div>
       </Wrapper>
     </>

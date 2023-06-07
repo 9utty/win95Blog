@@ -18,18 +18,22 @@ import Spacer from "../components/Spacer";
 import TabTag from "./TabTag";
 import Div from "./Div";
 import Modal from "../components/ModalWrapper";
+import { useRouter } from "next/router";
 
 interface Props {
   Header: string;
   Date: string;
   children: React.ReactNode;
+  MainURL?: string;
+  SubURL?: string;
 }
 
 const { useBreakpoint } = Grid;
 
-const PostLayout = ({ Header, Date, children }: Props) => {
+const PostLayout = ({ Header, Date, children, MainURL, SubURL }: Props) => {
   const screens = useBreakpoint();
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   const openModal = () => {
     setIsVisible(true);
