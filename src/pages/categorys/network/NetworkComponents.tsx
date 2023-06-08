@@ -1,5 +1,5 @@
 import React from "react";
-import Network1 from "./Network/Network1";
+import Network1 from "./Network1";
 import Network2 from "./Network/Network2";
 import { NetworkPost } from "@/datas/NetworkPost";
 import Network3 from "./Network/Network3";

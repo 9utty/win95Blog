@@ -17,15 +17,15 @@ import {
   WindowHeader,
 } from "react95";
 import styled from "styled-components";
-import JSCom from "../categorys/lang/javascript/JSComponents";
-import TSCom from "../categorys/lang/typescript/TSComponents";
-import MoimComponents from "../categorys/project/Moim/MoimComponents";
-import MyBlogComponents from "../categorys/project/MyBlog/MyBlogComponents";
-import NetworkComponents from "../categorys/network/NetworkComponents";
-import ReactCom from "../categorys/framework/react/ReactComponents";
-import MenuComponents from "../categorys/project/Menu/MenuComponents";
+import JSCom from "../Categorys/Lang/Javascript/JSComponents";
+import TSCom from "../Categorys/Lang/Typescript/TSComponents";
+import MoimComponents from "../Categorys/Project/Moim/MoimComponents";
+import MyBlogComponents from "../Categorys/Project/MyBlog/MyBlogComponents";
+import NetworkComponents from "../Categorys/Network/NetworkComponents";
+import ReactCom from "../Categorys/Framework/React/ReactComponents";
+import MenuComponents from "../Categorys/Project/Menu/MenuComponents";
 import AngularPost from "@/datas/AngularPost";
-import AngularCom from "../categorys/framework/angular/AngularCom";
+import AngularCom from "../Categorys/Framework/Angular/AngularCom";
 import Modal from "../components/ModalWrapper";
 
 const { useBreakpoint } = Grid;
