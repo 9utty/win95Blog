@@ -1,9 +1,9 @@
 import React from "react";
 import Network1 from "./Network1";
-import Network2 from "./Network/Network2";
+import Network2 from "./Network2";
 import { NetworkPost } from "@/datas/NetworkPost";
-import Network3 from "./Network/Network3";
-import Network4 from "./Network/Network4";
+import Network3 from "./Network3";
+import Network4 from "./Network4";
 
 interface Props {
   index?: number;
