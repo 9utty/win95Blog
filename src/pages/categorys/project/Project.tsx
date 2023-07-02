@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Grid } from "antd";
-import CategoryFolder from "@/pages/components/CategoryFolder";
-import CategoryHeader from "@/pages/components/CategoryHeader";
+import CategoryFolder from "@/pages/Components/CategoryFolder";
+import CategoryHeader from "@/pages/Components/CategoryHeader";
 import MyBlogComponents from "./MyBlog/MyBlogComponents";
 import MoimComponents from "./Moim/MoimComponents";
 import MenuComponents from "./Menu/MenuComponents";

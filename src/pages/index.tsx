@@ -1,14 +1,6 @@
 import React, { useState } from "react";
-import AppLayout from "./components/AppLayout";
-import Recommendation from "./components/Recommendation";
-import RCButton from "./components/RCButton";
-import { Row, Col } from "antd";
-import LangCategory from "./Categorys/Lang/Lang";
-import ProgressBars from "./components/ProgressBarMain";
-import ProjectCategory from "./Categorys/Project/Project";
-import FrameWorkCategory from "./Categorys/Framework/Framework";
-import Network from "./Categorys/Network/Network";
-import HackerNews from "./HackerNews/HackerNews";
+import AppLayout from "./Components/AppLayout";
+import ProgressBars from "./Components/ProgressBarMain";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,11 +22,7 @@ const Home = () => {
       ) : (
         <div>
           <AppLayout>
-            <Row gutter={[0, 30]}>
-              {Components.map(({ Component }, index) => {
-                return <Component key={index} />;
-              })}
-            </Row>
+            <div></div>
           </AppLayout>
         </div>
       )}
@@ -43,64 +31,3 @@ const Home = () => {
 };
 
 export default Home;
-
-interface Component {
-  Component: React.FunctionComponent;
-}
-
-const Components: Component[] = [
-  {
-    Component: () => {
-      return (
-        <Col xs={12} sm={8} md={4}>
-          <Recommendation />
-        </Col>
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <Col xs={12} sm={8} md={4}>
-          <HackerNews />
-        </Col>
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <Col xs={12} sm={8} md={4}>
-          <LangCategory />
-        </Col>
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <Col xs={12} sm={8} md={4}>
-          <ProjectCategory />
-        </Col>
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <Col xs={12} sm={8} md={4}>
-          <FrameWorkCategory />
-        </Col>
-      );
-    },
-  },
-  {
-    Component: () => {
-      return (
-        <Col xs={12} sm={8} md={4}>
-          <Network />
-        </Col>
-      );
-    },
-  },
-];

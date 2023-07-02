@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Grid } from "antd";
-import CategoryFolder from "@/pages/components/CategoryFolder";
-import CategoryHeader from "@/pages/components/CategoryHeader";
+import CategoryFolder from "@/pages/Components/CategoryFolder";
+import CategoryHeader from "@/pages/Components/CategoryHeader";
 import React1 from "./React/React1";
 import { ReactPost } from "@/datas/ReactPost";
 import ReactCom from "./React/ReactComponents";

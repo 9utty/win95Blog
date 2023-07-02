@@ -6,16 +6,19 @@ import TabTag from "@/pages/PostComponents/TabTag";
 import TextTag from "@/pages/PostComponents/TextTag";
 import Spacer from "@/pages/components/Spacer";
 import React from "react";
+import { useRouter } from "next/router";
 
-interface Post {
-  Header: string;
-  Date: string;
-  Tag: string;
-}
+const PostForm = () => {
+  const router = useRouter();
 
-const PostForm = ({ Header, Date, Tag }: Post) => {
+  const { Header, Data, Tag } = router.query;
+
+  const header = Header as string;
+  const date = Data as string;
+  const tag = Tag as string;
+
   return (
-    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
+    <PostTemplate Header={header} Date={date} Tag={tag}>
       <div></div>
     </PostTemplate>
   );

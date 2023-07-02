@@ -7,8 +7,8 @@ import {
   WindowHeader,
   ScrollView,
 } from "react95";
-import WindowIcon from "../components/WindowIcon";
-import Modal from "../components/ModalWrapper";
+import WindowIcon from "../Components/WindowIcon";
+import Modal from "../Components/ModalWrapper";
 import { GetStaticProps } from "next";
 
 const HackerNewsURL = "https://api.hnpwa.com/v0/news/1.json";

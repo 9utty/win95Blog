@@ -1,21 +1,24 @@
 import TextTag from "@/pages/PostComponents/TextTag";
 import H2 from "@/pages/PostComponents/H2";
 import PostTemplate from "@/pages/PostComponents/PostTemplate";
-import Spacer from "@/pages/components/Spacer";
 import React from "react";
 import Div from "@/pages/PostComponents/Div";
 import TabTag from "@/pages/PostComponents/TabTag";
 import CodeTag from "@/pages/PostComponents/Code";
+import Spacer from "@/pages/components/Spacer";
+import { useRouter } from "next/router";
 
-interface Post {
-  Header: string;
-  Date: string;
-  Tag: string;
-}
+const JavaScript3 = () => {
+  const router = useRouter();
 
-const JavaScript3 = ({ Header, Date, Tag }: Post) => {
+  const { Header, Data, Tag } = router.query;
+
+  const header = Header as string;
+  const date = Data as string;
+  const tag = Tag as string;
+
   return (
-    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
+    <PostTemplate Header={header} Date={date} Tag={tag}>
       <H2>
         <div>{`일급함수`}</div>
       </H2>

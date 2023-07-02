@@ -5,17 +5,20 @@ import PostTemplate from "@/pages/PostComponents/PostTemplate";
 import TabTag from "@/pages/PostComponents/TabTag";
 import TextTag from "@/pages/PostComponents/TextTag";
 import Spacer from "@/pages/components/Spacer";
+import { useRouter } from "next/router";
 import React from "react";
 
-interface Post {
-  Header: string;
-  Date: string;
-  Tag: string;
-}
+const JavaScript2 = () => {
+  const router = useRouter();
 
-const JavaScript2 = ({ Header, Date, Tag }: Post) => {
+  const { Header, Data, Tag } = router.query;
+
+  const header = Header as string;
+  const date = Data as string;
+  const tag = Tag as string;
+
   return (
-    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
+    <PostTemplate Header={header} Date={date} Tag={tag}>
       <H2>성공적인 프로그래밍에 대해서 생각해보자</H2>
       <Spacer />
       <Spacer />

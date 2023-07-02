@@ -4,18 +4,21 @@ import H2 from "@/pages/PostComponents/H2";
 import PostTemplate from "@/pages/PostComponents/PostTemplate";
 import TabTag from "@/pages/PostComponents/TabTag";
 import TextTag from "@/pages/PostComponents/TextTag";
-import Spacer from "@/pages/components/Spacer";
+import Spacer from "@/pages/Components/Spacer";
 import React from "react";
+import { useRouter } from "next/router";
 
-interface Post {
-  Header: string;
-  Date: string;
-  Tag: string;
-}
+const JavaScript4 = () => {
+  const router = useRouter();
 
-const JavaScript4 = ({ Header, Date, Tag }: Post) => {
+  const { Header, Data, Tag } = router.query;
+
+  const header = Header as string;
+  const date = Data as string;
+  const tag = Tag as string;
+
   return (
-    <PostTemplate Header={Header} Date={Date} Tag={Tag}>
+    <PostTemplate Header={header} Date={date} Tag={tag}>
       <H2>
         <div>{`JavaScript의 Promise`}</div>
       </H2>

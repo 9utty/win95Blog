@@ -1,12 +1,27 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 interface Props {
   Header: string;
   Date: string;
-  func: () => void;
+  Tag: string;
+  filePath: string;
 }
 
 const PostButton = (porps: Props) => {
+  const router = useRouter();
+
+  const openModal = () => {
+    router.push(
+      {
+        pathname: porps.filePath,
+        query: { Header: porps.Header, Date: porps.Date, Tag: porps.Tag },
+      },
+      undefined,
+      { shallow: false }
+    );
+  };
+
   return (
     <button
       style={{
@@ -15,7 +30,7 @@ const PostButton = (porps: Props) => {
         paddingBottom: "5px",
         marginBottom: "5px",
       }}
-      onClick={porps.func}
+      onClick={openModal}
     >
       <div
         style={{

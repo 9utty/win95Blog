@@ -17,8 +17,8 @@ import {
   WindowHeader,
 } from "react95";
 import styled from "styled-components";
-import JSCom from "../Categorys/Lang/Javascript/JSComponents";
-import TSCom from "../Categorys/Lang/Typescript/TSComponents";
+import JSCom from "../Categorys/Lang/JavaScript/JSComponents";
+import TSCom from "../Categorys/Lang/TypeScript/TSComponents";
 import MoimComponents from "../Categorys/Project/Moim/MoimComponents";
 import MyBlogComponents from "../Categorys/Project/MyBlog/MyBlogComponents";
 import NetworkComponents from "../Categorys/Network/NetworkComponents";
@@ -26,7 +26,7 @@ import ReactCom from "../Categorys/Framework/React/ReactComponents";
 import MenuComponents from "../Categorys/Project/Menu/MenuComponents";
 import AngularPost from "@/datas/AngularPost";
 import AngularCom from "../Categorys/Framework/Angular/AngularCom";
-import Modal from "../components/ModalWrapper";
+import Modal from "../Components/ModalWrapper";
 
 const { useBreakpoint } = Grid;
 

@@ -4,7 +4,7 @@ import H2 from "@/pages/PostComponents/H2";
 import PostTemplate from "@/pages/PostComponents/PostTemplate";
 import TabTag from "@/pages/PostComponents/TabTag";
 import TextTag from "@/pages/PostComponents/TextTag";
-import Spacer from "@/pages/components/Spacer";
+import Spacer from "@/pages/Components/Spacer";
 import React from "react";
 import { Tab } from "react95";
 

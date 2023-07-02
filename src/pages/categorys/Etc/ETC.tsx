@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "antd";
-import CategoryHeader from "@/pages/components/CategoryHeader";
+import CategoryHeader from "@/pages/Components/CategoryHeader";
 import { NetworkPost } from "@/datas/NetworkPost";
 
 const { useBreakpoint } = Grid;

@@ -1,5 +1,5 @@
 import React from "react";
-import Spacer from "../components/Spacer";
+import Spacer from "../Components/Spacer";
 import { Grid } from "antd";
 
 type Props = {

@@ -12,9 +12,10 @@ import {
   ScrollView,
 } from "react95";
 import styled from "styled-components";
-import Folder from "@/pages/components/Folder";
-import Category from "@/pages/components/CategoryFolder";
-import CategoryFolder from "@/pages/components/CategoryFolder";
+import Folder from "@/pages/Components/Folder";
+import Category from "@/pages/Components/CategoryFolder";
+import CategoryFolder from "@/pages/Components/CategoryFolder";
+import { useRouter } from "next/router";
 
 const { useBreakpoint } = Grid;
 
@@ -25,62 +26,52 @@ interface Props {
 
 const CategoryHeader = ({ HeaderName, children }: Props) => {
   const screens = useBreakpoint();
-  const [isVisible, setIsVisible] = useState(false);
-
-  const openModal = () => {
-    setIsVisible(true);
-    document.body.style.overflow = "hidden";
-  };
+  const router = useRouter();
 
   const closeModal = () => {
-    setIsVisible(false);
     document.body.style.overflow = "auto";
+    router.back();
   };
 
   return (
     <>
-      <Folder FolderName={`${HeaderName}`} func={openModal} />
-      {isVisible && (
-        <ModalWrapper>
-          <Window
-            className="window"
-            style={{
-              position: "absolute",
-              top: screens.md ? "50%" : "0%",
-              left: screens.md ? "50%" : "0%",
-              width: screens.md ? "80vw" : "99vw",
-              height: "60vh",
-              transform: screens.md
-                ? "translate(-50%, -50%)"
-                : "translate(0%, 10%)",
-            }}
+      <ModalWrapper>
+        <Window
+          className="window"
+          style={{
+            position: "absolute",
+            top: screens.md ? "50%" : "0%",
+            left: screens.md ? "50%" : "0%",
+            width: screens.md ? "80vw" : "99vw",
+            height: "60vh",
+            transform: screens.md
+              ? "translate(-50%, -50%)"
+              : "translate(0%, 10%)",
+          }}
+        >
+          <WindowHeader
+            className="window-title"
+            style={{ justifyContent: "space-between", display: "flex" }}
           >
-            <WindowHeader
-              className="window-title"
-              style={{ justifyContent: "space-between", display: "flex" }}
-            >
-              <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
-                {`${HeaderName}`}
+            <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "22px" }}>
+              {`${HeaderName}`}
+            </span>
+            <Button style={{ marginTop: "3px" }} onClick={closeModal}>
+              <span style={{ fontFamily: "dunggeunmo-bold", fontSize: "20px" }}>
+                X
               </span>
-              <Button style={{ marginTop: "3px" }} onClick={closeModal}>
-                <span
-                  style={{ fontFamily: "dunggeunmo-bold", fontSize: "20px" }}
-                >
-                  X
-                </span>
-              </Button>
-            </WindowHeader>
-            <WindowContent>
-              <ScrollView
-                shadow={false}
-                style={{ width: "100%", height: "44vh" }}
-              >
-                <div style={{ marginLeft: "10px" }}>{children}</div>
-              </ScrollView>
-            </WindowContent>
-          </Window>
-        </ModalWrapper>
-      )}
+            </Button>
+          </WindowHeader>
+          <WindowContent>
+            <ScrollView
+              shadow={false}
+              style={{ width: "100%", height: "44vh" }}
+            >
+              <div style={{ marginLeft: "10px" }}>{children}</div>
+            </ScrollView>
+          </WindowContent>
+        </Window>
+      </ModalWrapper>
     </>
   );
 };
