@@ -2,10 +2,10 @@ import React from "react";
 import { Row, Col, Grid } from "antd";
 import CategoryFolder from "@/pages/components/CategoryFolder";
 import CategoryHeader from "@/pages/components/CategoryHeader";
-import React1 from "./react/React1";
+import React1 from "./React/React1";
 import { ReactPost } from "@/datas/ReactPost";
-import ReactCom from "./react/ReactComponents";
-import AngularCom from "./angular/AngularCom";
+import ReactCom from "./React/ReactComponents";
+import AngularCom from "./Angular/AngularCom";
 
 const { useBreakpoint } = Grid;
 

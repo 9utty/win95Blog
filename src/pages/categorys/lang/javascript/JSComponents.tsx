@@ -1,8 +1,8 @@
 import React from "react";
-import JavaScript1 from "@/pages/categorys/lang/javascript/JavaScript1";
-import JavaScript2 from "@/pages/categorys/lang/javascript/JavaScript2";
-import JavaScript3 from "@/pages/categorys/lang/javascript/JavaScript3";
-import JavaScript4 from "@/pages/categorys/lang/javascript/Javascript4";
+import JavaScript1 from "@/pages/Categorys/Lang/Javascript/JavaScript1";
+import JavaScript2 from "@/pages/Categorys/Lang/Javascript/JavaScript2";
+import JavaScript3 from "@/pages/Categorys/Lang/Javascript/JavaScript3";
+import JavaScript4 from "@/pages/Categorys/Lang/Javascript/Javascript4";
 import JSPost from "@/datas/JSPost";
 
 interface Component {

@@ -3,12 +3,12 @@ import AppLayout from "./components/AppLayout";
 import Recommendation from "./components/Recommendation";
 import RCButton from "./components/RCButton";
 import { Row, Col } from "antd";
-import LangCategory from "./categorys/lang/Lang";
+import LangCategory from "./Categorys/Lang/Lang";
 import ProgressBars from "./components/ProgressBarMain";
-import ProjectCategory from "./categorys/project/Project";
-import FrameWorkCategory from "./categorys/framework/Framework";
-import Network from "./categorys/network/Network";
-import HackerNews from "./hackerNews/HackerNews";
+import ProjectCategory from "./Categorys/Project/Project";
+import FrameWorkCategory from "./Categorys/Framework/Framework";
+import Network from "./Categorys/Network/Network";
+import HackerNews from "./HackerNews/HackerNews";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
