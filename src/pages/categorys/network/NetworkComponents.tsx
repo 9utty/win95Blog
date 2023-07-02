@@ -4,6 +4,7 @@ import Network2 from "./Network2";
 import { NetworkPost } from "@/datas/NetworkPost";
 import Network3 from "./Network3";
 import Network4 from "./Network4";
+import PostButton from "@/pages/Components/PostButton";
 
 interface Props {
   index?: number;
@@ -33,10 +34,11 @@ const NetowrkComponent: Componet[] = [
   {
     Component: () => {
       return (
-        <Network1
+        <PostButton
           Header={NetworkPost[0].Header}
           Date={NetworkPost[0].Date}
           Tag={NetworkPost[0].Tag}
+          filePath="/Categorys/Network/Network1"
         />
       );
     },
@@ -44,10 +46,11 @@ const NetowrkComponent: Componet[] = [
   {
     Component: () => {
       return (
-        <Network2
+        <PostButton
           Header={NetworkPost[1].Header}
           Date={NetworkPost[1].Date}
           Tag={NetworkPost[1].Tag}
+          filePath="/Categorys/Network/Network2"
         />
       );
     },
@@ -55,10 +58,11 @@ const NetowrkComponent: Componet[] = [
   {
     Component: () => {
       return (
-        <Network3
+        <PostButton
           Header={NetworkPost[2].Header}
           Date={NetworkPost[2].Date}
           Tag={NetworkPost[2].Tag}
+          filePath="/Categorys/Network/Network3"
         />
       );
     },
@@ -66,10 +70,11 @@ const NetowrkComponent: Componet[] = [
   {
     Component: () => {
       return (
-        <Network4
+        <PostButton
           Header={NetworkPost[3].Header}
           Date={NetworkPost[3].Date}
           Tag={NetworkPost[3].Tag}
+          filePath="/Categorys/Network/Network4"
         />
       );
     },
